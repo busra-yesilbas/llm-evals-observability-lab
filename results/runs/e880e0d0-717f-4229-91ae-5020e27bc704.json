@@ -1,0 +1,143 @@
+{
+  "run_id": "e880e0d0-717f-4229-91ae-5020e27bc704",
+  "experiment_id": "baseline_k5",
+  "timestamp": "2026-03-09T17:28:26.327194",
+  "query": "How does NovaSaaS's webhook system compare to its native integrations in terms of flexibility and setup complexity?",
+  "example_id": "eval_013",
+  "prompt_strategy": "baseline",
+  "top_k": 5,
+  "embedding_backend": "tfidf",
+  "retrieved_chunks": [
+    {
+      "chunk_id": "doc_integrations_001_chunk_000",
+      "doc_id": "doc_integrations_001",
+      "chunk_text": "NovaSaaS Integrations Native Integrations NovaSaaS offers 50+ native integrations with popular business tools. One-click integration setup is available for: Slack, Microsoft Teams, Google Workspace, Zoom, Salesforce, HubSpot, Zendesk, Jira, GitHub, GitLab, Figma, Dropbox, Box, Google Drive, OneDrive, Stripe, QuickBooks, and many others. Native integrations include automatic field mapping and do not require developer configuration. Integration management is available at Settings > Integrations. Webhooks Webhooks allow NovaSaaS to send real-time HTTP POST notifications to any external URL when specific events occur. Webhooks are useful for integrating with custom applications or systems not available in the native integration library. Webhook setup requires: (1) providing the target HTTP endpoint URL, (2) selecting the event types to subscribe to, (3) optionally configuring a secret for signature verification. NovaSaaS signs webhook payloads with an HMAC-SHA256 signature in the X-NovaSaaS-Signature header. Developers should verify this signature to prevent spoofed requests. Error handling and retries: NovaSaaS retries failed webhook deliveries up to 5 times with exponential backoff. Failed deliveries are logged in Settings > Webhooks > Delivery Logs. Compared to native integrations, webhooks offer greater flexibility and can connect NovaSaaS to any HTTP endpoint. However, they require developer configuration including payload parsing, signature verification, and error handling.",
+      "score": 0.2419,
+      "rank": 1,
+      "metadata": {
+        "title": "Integrations and API Reference Overview",
+        "source_type": "guide",
+        "category": "integrations",
+        "version": "2.5",
+        "last_updated": "2025-11-01"
+      }
+    },
+    {
+      "chunk_id": "doc_integrations_001_chunk_001",
+      "doc_id": "doc_integrations_001",
+      "chunk_text": "Failed deliveries are logged in Settings > Webhooks > Delivery Logs. Compared to native integrations, webhooks offer greater flexibility and can connect NovaSaaS to any HTTP endpoint. However, they require developer configuration including payload parsing, signature verification, and error handling. For non-technical teams, native integrations are recommended. Webhooks are available on the Growth plan and above. REST API NovaSaaS provides a versioned REST API (current version: v2). API authentication is handled via Bearer tokens generated in Settings > Developer > API Tokens. All API responses use JSON. Rate limits: 1,000 requests per minute for Starter, 10,000 requests per minute for Growth and above. When the rate limit is exceeded, the API returns HTTP 429 Too Many Requests with a Retry-After header indicating when the next request may be made. Developers should implement exponential backoff for retry logic. Permanent rate limit increases can be requested through the developer portal at developers.novasaas.io. GraphQL API A GraphQL API is available in beta for Enterprise customers. It supports all core resource types and allows clients to request exactly the data they need, reducing over-fetching. Documentation is available at developers.novasaas.io/graphql. Zapier and Make NovaSaaS is available as a Zapier app with 200+ supported triggers and",
+      "score": 0.1425,
+      "rank": 2,
+      "metadata": {
+        "title": "Integrations and API Reference Overview",
+        "source_type": "guide",
+        "category": "integrations",
+        "version": "2.5",
+        "last_updated": "2025-11-01"
+      }
+    },
+    {
+      "chunk_id": "doc_onboarding_001_chunk_001",
+      "doc_id": "doc_onboarding_001",
+      "chunk_text": "at no additional cost for Business and Enterprise customers. Supported source systems for automated migration include Salesforce, HubSpot, Notion, Airtable, and Monday.com. Notification Channels NovaSaaS supports email, Slack, and Microsoft Teams as notification channels for alerts and workflow automations. SMS notifications are available on the Enterprise plan. Webhook endpoints can also be configured as custom notification targets. Notification preferences are managed per-user in Profile > Notifications or globally by admins in Settings > Notifications. First Project Setup A project in NovaSaaS represents a unit of work (e.g., a team, a client, a product). Create your first project from the dashboard by clicking '+ New Project'. Configure project settings including access control, custom fields, and default workflow stages. Projects can be made public (visible to all workspace members) or private (invite-only). Getting Help In-app help is available by clicking the '?' icon in the sidebar. The NovaSaaS Help Center (help.novasaas.io) contains step-by-step guides, video tutorials, and a searchable knowledge base. For direct support, use the in-app chat widget or email support@novasaas.io.",
+      "score": 0.0494,
+      "rank": 3,
+      "metadata": {
+        "title": "Onboarding Guide for New Workspaces",
+        "source_type": "guide",
+        "category": "onboarding",
+        "version": "4.0",
+        "last_updated": "2025-12-01"
+      }
+    },
+    {
+      "chunk_id": "doc_pricing_001_chunk_000",
+      "doc_id": "doc_pricing_001",
+      "chunk_text": "NovaSaaS Pricing Plans Starter Plan — Free The Starter plan is permanently free and supports up to 5 user seats. It includes the core project management features, 10 GB of storage, email support with 48-hour response SLA, and access to the NovaSaaS API at 1,000 requests per minute. The Starter plan does not include SSO, advanced analytics, or custom roles. Growth Plan — $29/seat/month The Growth plan supports up to 25 user seats. Additional seats can be purchased at $29 per seat per month. Features include all Starter features plus: 100 GB storage, priority email support with 12-hour response SLA, advanced analytics dashboard, webhook integrations, custom branding, and 10,000 API requests per minute. A 14-day free trial of the Growth plan is available with no credit card required. After 14 days, the account automatically downgrades to Starter unless a paid plan is selected. Business Plan — $49/seat/month The Business plan supports up to 50 user seats at $49 per seat per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a",
+      "score": 0.0464,
+      "rank": 4,
+      "metadata": {
+        "title": "Pricing Plans and Feature Tiers",
+        "source_type": "guide",
+        "category": "pricing",
+        "version": "3.1",
+        "last_updated": "2025-11-15"
+      }
+    },
+    {
+      "chunk_id": "doc_compliance_001_chunk_001",
+      "doc_id": "doc_compliance_001",
+      "chunk_text": "during onboarding; migration of existing data incurs a one-time fee. HIPAA NovaSaaS supports HIPAA-compliant workflows for healthcare organizations on the Enterprise plan. A Business Associate Agreement (BAA) is available for Enterprise customers. HIPAA-compliant deployment requires enabling specific configuration settings documented in the Enterprise HIPAA guide. NovaSaaS does not claim HIPAA compliance for non-Enterprise plans. SOC 2 Type II NovaSaaS's SOC 2 Type II report covers the Security, Availability, and Confidentiality trust service criteria. The report is available to Enterprise customers under NDA. A summary of controls is publicly available at trust.novasaas.io. Data Retention Customer data is retained for the duration of the subscription plus 30 days after cancellation (soft-delete period). After 30 days, data is permanently deleted from production systems. Compliance archives (audit logs, access records) are retained for 7 years per regulatory requirements. Customers may request early deletion via the DSR portal. California Consumer Privacy Act (CCPA) NovaSaaS complies with CCPA. California residents may submit requests for data access, deletion, or opt-out of sale of personal information at trust.novasaas.io. NovaSaaS does not sell personal information to third parties.",
+      "score": 0.035,
+      "rank": 5,
+      "metadata": {
+        "title": "Compliance, Privacy, and Data Governance",
+        "source_type": "policy",
+        "category": "compliance",
+        "version": "1.8",
+        "last_updated": "2025-10-15"
+      }
+    }
+  ],
+  "retrieved_doc_ids": [
+    "doc_integrations_001",
+    "doc_onboarding_001",
+    "doc_pricing_001",
+    "doc_compliance_001"
+  ],
+  "prompt_text": "You are a helpful support assistant for NovaSaaS, a B2B SaaS platform.\nAnswer the user's question using ONLY the information provided in the context below.\nBe concise and factual.\n\nCONTEXT:\nNovaSaaS Integrations Native Integrations NovaSaaS offers 50+ native integrations with popular business tools. One-click integration setup is available for: Slack, Microsoft Teams, Google Workspace, Zoom, Salesforce, HubSpot, Zendesk, Jira, GitHub, GitLab, Figma, Dropbox, Box, Google Drive, OneDrive, Stripe, QuickBooks, and many others. Native integrations include automatic field mapping and do not require developer configuration. Integration management is available at Settings > Integrations. Webhooks Webhooks allow NovaSaaS to send real-time HTTP POST notifications to any external URL when specific events occur. Webhooks are useful for integrating with custom applications or systems not available in the native integration library. Webhook setup requires: (1) providing the target HTTP endpoint URL, (2) selecting the event types to subscribe to, (3) optionally configuring a secret for signature verification. NovaSaaS signs webhook payloads with an HMAC-SHA256 signature in the X-NovaSaaS-Signature header. Developers should verify this signature to prevent spoofed requests. Error handling and retries: NovaSaaS retries failed webhook deliveries up to 5 times with exponential backoff. Failed deliveries are logged in Settings > Webhooks > Delivery Logs. Compared to native integrations, webhooks offer greater flexibility and can connect NovaSaaS to any HTTP endpoint. However, they require developer configuration including payload parsing, signature verification, and error handling.\n\nFailed deliveries are logged in Settings > Webhooks > Delivery Logs. Compared to native integrations, webhooks offer greater flexibility and can connect NovaSaaS to any HTTP endpoint. However, they require developer configuration including payload parsing, signature verification, and error handling. For non-technical teams, native integrations are recommended. Webhooks are available on the Growth plan and above. REST API NovaSaaS provides a versioned REST API (current version: v2). API authentication is handled via Bearer tokens generated in Settings > Developer > API Tokens. All API responses use JSON. Rate limits: 1,000 requests per minute for Starter, 10,000 requests per minute for Growth and above. When the rate limit is exceeded, the API returns HTTP 429 Too Many Requests with a Retry-After header indicating when the next request may be made. Developers should implement exponential backoff for retry logic. Permanent rate limit increases can be requested through the developer portal at developers.novasaas.io. GraphQL API A GraphQL API is available in beta for Enterprise customers. It supports all core resource types and allows clients to request exactly the data they need, reducing over-fetching. Documentation is available at developers.novasaas.io/graphql. Zapier and Make NovaSaaS is available as a Zapier app with 200+ supported triggers and\n\nat no additional cost for Business and Enterprise customers. Supported source systems for automated migration include Salesforce, HubSpot, Notion, Airtable, and Monday.com. Notification Channels NovaSaaS supports email, Slack, and Microsoft Teams as notification channels for alerts and workflow automations. SMS notifications are available on the Enterprise plan. Webhook endpoints can also be configured as custom notification targets. Notification preferences are managed per-user in Profile > Notifications or globally by admins in Settings > Notifications. First Project Setup A project in NovaSaaS represents a unit of work (e.g., a team, a client, a product). Create your first project from the dashboard by clicking '+ New Project'. Configure project settings including access control, custom fields, and default workflow stages. Projects can be made public (visible to all workspace members) or private (invite-only). Getting Help In-app help is available by clicking the '?' icon in the sidebar. The NovaSaaS Help Center (help.novasaas.io) contains step-by-step guides, video tutorials, and a searchable knowledge base. For direct support, use the in-app chat widget or email support@novasaas.io.\n\nNovaSaaS Pricing Plans Starter Plan — Free The Starter plan is permanently free and supports up to 5 user seats. It includes the core project management features, 10 GB of storage, email support with 48-hour response SLA, and access to the NovaSaaS API at 1,000 requests per minute. The Starter plan does not include SSO, advanced analytics, or custom roles. Growth Plan — $29/seat/month The Growth plan supports up to 25 user seats. Additional seats can be purchased at $29 per seat per month. Features include all Starter features plus: 100 GB storage, priority email support with 12-hour response SLA, advanced analytics dashboard, webhook integrations, custom branding, and 10,000 API requests per minute. A 14-day free trial of the Growth plan is available with no credit card required. After 14 days, the account automatically downgrades to Starter unless a paid plan is selected. Business Plan — $49/seat/month The Business plan supports up to 50 user seats at $49 per seat per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a\n\nduring onboarding; migration of existing data incurs a one-time fee. HIPAA NovaSaaS supports HIPAA-compliant workflows for healthcare organizations on the Enterprise plan. A Business Associate Agreement (BAA) is available for...\n\nQUESTION: How does NovaSaaS's webhook system compare to its native integrations in terms of flexibility and setup complexity?\n\nANSWER:",
+  "generated_answer": {
+    "answer_text": "NovaSaaS Integrations Native Integrations NovaSaaS offers 50+ native integrations with popular business tools. One-click integration setup is available for: Slack, Microsoft Teams, Google Workspace, Zoom, Salesforce, HubSpot, Zendesk, Jira, GitHub, GitLab, Figma, Dropbox, Box, Google Drive, OneDrive, Stripe, QuickBooks, and many others. Native integrations include automatic field mapping and do not require developer configuration. Integration management is available at Settings > Integrations.",
+    "cited_chunk_ids": [
+      "doc_integrations_001_chunk_000"
+    ],
+    "cited_doc_ids": [
+      "doc_integrations_001"
+    ],
+    "abstained": false,
+    "prompt_strategy": "baseline",
+    "word_count": 62,
+    "token_count_estimate": 82
+  },
+  "metrics": {
+    "retrieval": {
+      "hit_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "context_precision": 0.4,
+      "context_recall": 0.5,
+      "retrieved_relevant_count": 1,
+      "retrieved_total_count": 5
+    },
+    "answer": {
+      "answer_relevance_score": 0.3175,
+      "groundedness_score": 0.4251,
+      "citation_coverage_score": 0.5,
+      "exact_match_proxy": 0.3509,
+      "faithfulness_proxy": 0.4289,
+      "hallucination_risk_score": 0.5749,
+      "abstention_quality_score": 0.3175,
+      "overall_score": 0.4227
+    },
+    "latency_ms": 2.002100000026985,
+    "prompt_tokens_estimate": 1129,
+    "output_tokens_estimate": 82,
+    "estimated_cost_usd": 0.000688,
+    "failure_modes": [
+      "none"
+    ],
+    "warnings": []
+  },
+  "config_snapshot": {
+    "experiment_id": "baseline_k5",
+    "top_k": 5,
+    "prompt_strategy": "baseline",
+    "embedding_backend": "tfidf",
+    "step_durations_ms": {
+      "retrieval": 0.84,
+      "prompt_building": 0.09,
+      "generation": 1.07
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,31 @@
+app:
+  name: "LLM Evals & Observability Lab"
+  version: "0.1.0"
+  description: "Production-grade evaluation and observability framework for RAG systems"
+
+paths:
+  data_dir: "data"
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  eval_dir: "data/eval"
+  results_dir: "results"
+  runs_dir: "results/runs"
+  tables_dir: "results/tables"
+  figures_dir: "results/figures"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
+  file: null  # set to a path to enable file logging
+
+generation:
+  backend: "local"  # "local" | "openai" | "anthropic"
+  model: null       # model name for API backends
+  max_tokens: 512
+  temperature: 0.0  # deterministic by default for reproducibility
+
+observability:
+  store_traces: true
+  store_format: "json"  # "json" only currently
+  compress_chunks_in_trace: false
+  max_stored_runs: 1000

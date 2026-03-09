@@ -1,0 +1,113 @@
+{
+  "run_id": "dcf8358a-19cc-4257-bcb6-e3580ff8b0bf",
+  "experiment_id": "grounded_k3",
+  "timestamp": "2026-03-09T17:28:27.365032",
+  "query": "What SSO providers does NovaSaaS support?",
+  "example_id": "eval_003",
+  "prompt_strategy": "grounded",
+  "top_k": 3,
+  "embedding_backend": "tfidf",
+  "retrieved_chunks": [
+    {
+      "chunk_id": "doc_security_001_chunk_000",
+      "doc_id": "doc_security_001",
+      "chunk_text": "NovaSaaS Security Architecture Encryption All data stored in NovaSaaS is encrypted at rest using AES-256. Data in transit is protected using TLS 1.2 or higher. Encryption keys are managed through AWS KMS and rotated annually. Database backups are encrypted separately with a unique key per backup. Single Sign-On (SSO) NovaSaaS supports SAML 2.0-based SSO with the following identity providers: Okta, Azure Active Directory (Azure AD), Google Workspace, and OneLogin. SSO is available on the Business and Enterprise plans. To configure SSO, navigate to Settings > Security > Single Sign-On and follow the setup wizard. A test connection must be verified before SSO is enforced. SSO enforcement (blocking password login) is available on the Enterprise plan. SCIM Provisioning SCIM (System for Cross-domain Identity Management) provisioning allows automatic user creation, deprovisioning, and group sync from your identity provider. SCIM is available on the Business and Enterprise plans and supports Okta and Azure AD as SCIM providers. Multi-Factor Authentication (MFA) MFA is supported via TOTP authenticator apps (Google Authenticator, Authy, 1Password) and hardware security keys (FIDO2/WebAuthn). MFA enforcement across all users can be configured by workspace admins. SMS-based MFA is not supported due to SIM-swap risks. Role-Based Access Control NovaSaaS uses a role-based",
+      "score": 0.1448,
+      "rank": 1,
+      "metadata": {
+        "title": "Security Architecture and Access Control",
+        "source_type": "guide",
+        "category": "security",
+        "version": "2.0",
+        "last_updated": "2025-09-20"
+      }
+    },
+    {
+      "chunk_id": "doc_pricing_001_chunk_000",
+      "doc_id": "doc_pricing_001",
+      "chunk_text": "NovaSaaS Pricing Plans Starter Plan — Free The Starter plan is permanently free and supports up to 5 user seats. It includes the core project management features, 10 GB of storage, email support with 48-hour response SLA, and access to the NovaSaaS API at 1,000 requests per minute. The Starter plan does not include SSO, advanced analytics, or custom roles. Growth Plan — $29/seat/month The Growth plan supports up to 25 user seats. Additional seats can be purchased at $29 per seat per month. Features include all Starter features plus: 100 GB storage, priority email support with 12-hour response SLA, advanced analytics dashboard, webhook integrations, custom branding, and 10,000 API requests per minute. A 14-day free trial of the Growth plan is available with no credit card required. After 14 days, the account automatically downgrades to Starter unless a paid plan is selected. Business Plan — $49/seat/month The Business plan supports up to 50 user seats at $49 per seat per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a",
+      "score": 0.0939,
+      "rank": 2,
+      "metadata": {
+        "title": "Pricing Plans and Feature Tiers",
+        "source_type": "guide",
+        "category": "pricing",
+        "version": "3.1",
+        "last_updated": "2025-11-15"
+      }
+    },
+    {
+      "chunk_id": "doc_pricing_001_chunk_001",
+      "doc_id": "doc_pricing_001",
+      "chunk_text": "per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a 99.5% uptime SLA. Enterprise Plan — Custom pricing The Enterprise plan is designed for organizations with more than 50 users or special compliance requirements. Features include all Business features plus: unlimited seats, 99.9% uptime SLA, dedicated infrastructure (optional), custom data residency, HIPAA BAA availability, 24/7 dedicated support with 1-hour response SLA for critical issues, SSO with SCIM provisioning, and custom integrations. Enterprise pricing is negotiated annually. Contact sales@novasaas.io for a quote. Free Trial A 14-day free trial of the Growth plan is available with no credit card required. All Growth features are available during the trial. After 14 days, accounts automatically downgrade to Starter. Nonprofit and Startup Discounts Registered nonprofits qualify for a 50% discount on any paid plan. Startups under 2 years old with fewer than 10 employees qualify for a 30% discount on the Growth plan. Contact sales@novasaas.io with supporting documentation.",
+      "score": 0.0742,
+      "rank": 3,
+      "metadata": {
+        "title": "Pricing Plans and Feature Tiers",
+        "source_type": "guide",
+        "category": "pricing",
+        "version": "3.1",
+        "last_updated": "2025-11-15"
+      }
+    }
+  ],
+  "retrieved_doc_ids": [
+    "doc_security_001",
+    "doc_pricing_001"
+  ],
+  "prompt_text": "You are a precise support assistant for NovaSaaS. Your answers must be fully supported by the provided context passages.\n\nInstructions:\n- Answer using ONLY information found in the context.\n- After your answer, list the source chunk IDs you used as [Source: chunk_id].\n- If the context does not contain enough information to answer, respond with:\n  \"I cannot answer this question based on the available documentation.\"\n- Do NOT speculate or add information beyond the context.\n\nCONTEXT PASSAGES:\n[doc_security_001_chunk_000] NovaSaaS Security Architecture Encryption All data stored in NovaSaaS is encrypted at rest using AES-256. Data in transit is protected using TLS 1.2 or higher. Encryption keys are managed through AWS KMS and rotated annually. Database backups are encrypted separately with a unique key per backup. Single Sign-On (SSO) NovaSaaS supports SAML 2.0-based SSO with the following identity providers: Okta, Azure Active Directory (Azure AD), Google Workspace, and OneLogin. SSO is available on the Business and Enterprise plans. To configure SSO, navigate to Settings > Security > Single Sign-On and follow the setup wizard. A test connection must be verified before SSO is enforced. SSO enforcement (blocking password login) is available on the Enterprise plan. SCIM Provisioning SCIM (System for Cross-domain Identity Management) provisioning allows automatic user creation, deprovisioning, and group sync from your identity provider. SCIM is available on the Business and Enterprise plans and supports Okta and Azure AD as SCIM providers. Multi-Factor Authentication (MFA) MFA is supported via TOTP authenticator apps (Google Authenticator, Authy, 1Password) and hardware security keys (FIDO2/WebAuthn). MFA enforcement across all users can be configured by workspace admins. SMS-based MFA is not supported due to SIM-swap risks. Role-Based Access Control NovaSaaS uses a role-based\n\n[doc_pricing_001_chunk_000] NovaSaaS Pricing Plans Starter Plan — Free The Starter plan is permanently free and supports up to 5 user seats. It includes the core project management features, 10 GB of storage, email support with 48-hour response SLA, and access to the NovaSaaS API at 1,000 requests per minute. The Starter plan does not include SSO, advanced analytics, or custom roles. Growth Plan — $29/seat/month The Growth plan supports up to 25 user seats. Additional seats can be purchased at $29 per seat per month. Features include all Starter features plus: 100 GB storage, priority email support with 12-hour response SLA, advanced analytics dashboard, webhook integrations, custom branding, and 10,000 API requests per minute. A 14-day free trial of the Growth plan is available with no credit card required. After 14 days, the account automatically downgrades to Starter unless a paid plan is selected. Business Plan — $49/seat/month The Business plan supports up to 50 user seats at $49 per seat per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a\n\n[doc_pricing_001_chunk_001] per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a 99.5% uptime SLA. Enterprise Plan — Custom pricing The Enterprise plan is designed for organizations with more than 50 users or special compliance requirements. Features include all Business features plus: unlimited seats, 99.9% uptime SLA, dedicated infrastructure (optional), custom data residency, HIPAA BAA availability, 24/7 dedicated support with 1-hour response SLA for critical issues, SSO with SCIM provisioning, and custom integrations. Enterprise pricing is negotiated annually. Contact sales@novasaas.io for a quote. Free Trial A 14-day free trial of the Growth plan is available with no credit card required. All Growth features are available during the trial. After 14 days, accounts automatically downgrade to Starter. Nonprofit and Startup Discounts Registered nonprofits qualify for a 50% discount on any paid plan. Startups under 2 years old with fewer than 10 employees qualify for a 30% discount on the Growth plan. Contact sales@novasaas.io with supporting documentation.\n\nQUESTION: What SSO providers does NovaSaaS support?\n\nANSWER (with citations):",
+  "generated_answer": {
+    "answer_text": "NovaSaaS Pricing Plans Starter Plan — Free The Starter plan is permanently free and supports up to 5 user seats. It includes the core project management features, 10 GB of storage, email support with 48-hour response SLA, and access to the NovaSaaS API at 1,000 requests per minute. The Starter plan does not include SSO, advanced analytics, or custom roles. Features include all Starter features plus: 100 GB storage, priority email support with 12-hour response SLA, advanced analytics dashboard, webhook integrations, custom branding, and 10,000 API requests per minute. [Source: doc_pricing_001_chunk_000]",
+    "cited_chunk_ids": [
+      "doc_pricing_001_chunk_000"
+    ],
+    "cited_doc_ids": [
+      "doc_pricing_001"
+    ],
+    "abstained": false,
+    "prompt_strategy": "grounded",
+    "word_count": 91,
+    "token_count_estimate": 121
+  },
+  "metrics": {
+    "retrieval": {
+      "hit_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "context_precision": 0.3333,
+      "context_recall": 1.0,
+      "retrieved_relevant_count": 1,
+      "retrieved_total_count": 3
+    },
+    "answer": {
+      "answer_relevance_score": 0.254,
+      "groundedness_score": 0.8062,
+      "citation_coverage_score": 0.0,
+      "exact_match_proxy": 0.15,
+      "faithfulness_proxy": 0.8066,
+      "hallucination_risk_score": 0.1938,
+      "abstention_quality_score": 0.254,
+      "overall_score": 0.533
+    },
+    "latency_ms": 1.62820000150532,
+    "prompt_tokens_estimate": 896,
+    "output_tokens_estimate": 121,
+    "estimated_cost_usd": 0.00063,
+    "failure_modes": [
+      "missing_citation"
+    ],
+    "warnings": []
+  },
+  "config_snapshot": {
+    "experiment_id": "grounded_k3",
+    "top_k": 3,
+    "prompt_strategy": "grounded",
+    "embedding_backend": "tfidf",
+    "step_durations_ms": {
+      "retrieval": 0.81,
+      "prompt_building": 0.07,
+      "generation": 0.73
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

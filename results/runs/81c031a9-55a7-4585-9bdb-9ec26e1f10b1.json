@@ -1,0 +1,139 @@
+{
+  "run_id": "81c031a9-55a7-4585-9bdb-9ec26e1f10b1",
+  "experiment_id": "high_abstain_k5",
+  "timestamp": "2026-03-09T17:28:27.793494",
+  "query": "How many users can be added under the Starter plan?",
+  "example_id": "eval_002",
+  "prompt_strategy": "baseline",
+  "top_k": 5,
+  "embedding_backend": "tfidf",
+  "retrieved_chunks": [
+    {
+      "chunk_id": "doc_pricing_001_chunk_000",
+      "doc_id": "doc_pricing_001",
+      "chunk_text": "NovaSaaS Pricing Plans Starter Plan — Free The Starter plan is permanently free and supports up to 5 user seats. It includes the core project management features, 10 GB of storage, email support with 48-hour response SLA, and access to the NovaSaaS API at 1,000 requests per minute. The Starter plan does not include SSO, advanced analytics, or custom roles. Growth Plan — $29/seat/month The Growth plan supports up to 25 user seats. Additional seats can be purchased at $29 per seat per month. Features include all Starter features plus: 100 GB storage, priority email support with 12-hour response SLA, advanced analytics dashboard, webhook integrations, custom branding, and 10,000 API requests per minute. A 14-day free trial of the Growth plan is available with no credit card required. After 14 days, the account automatically downgrades to Starter unless a paid plan is selected. Business Plan — $49/seat/month The Business plan supports up to 50 user seats at $49 per seat per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a",
+      "score": 0.1517,
+      "rank": 1,
+      "metadata": {
+        "title": "Pricing Plans and Feature Tiers",
+        "source_type": "guide",
+        "category": "pricing",
+        "version": "3.1",
+        "last_updated": "2025-11-15"
+      }
+    },
+    {
+      "chunk_id": "doc_storage_001_chunk_000",
+      "doc_id": "doc_storage_001",
+      "chunk_text": "NovaSaaS Storage and Data Limits File Attachments NovaSaaS supports file attachments in projects, tasks, and messages. The maximum file size per attachment is 50 MB. Supported file types include documents (PDF, DOCX, XLSX, PPTX, TXT), images (PNG, JPG, GIF, WebP, SVG), audio (MP3, WAV), video (MP4, MOV up to 50 MB), and archives (ZIP, TAR.GZ). Files are scanned for malware upon upload. Malicious files are quarantined and the uploader is notified. Storage Quotas by Plan Starter plan: 10 GB total storage per workspace. Growth plan: 100 GB total storage per workspace. Business plan: 500 GB total storage per workspace. Enterprise plan: unlimited storage (subject to fair use policy). Storage usage is visible in Settings > Storage. Workspaces approaching 90% of their quota receive email notifications. Exceeding the quota prevents new file uploads until storage is freed or the plan is upgraded. Data Export Workspace admins can export all workspace data from Settings > Data > Export. Exports are available in JSON format (complete, machine-readable) or CSV format (flat, for spreadsheet analysis). Export jobs for large workspaces may take up to 24 hours. Completed export files are available for download for 7 days before automatic deletion. API-based data export is available",
+      "score": 0.0772,
+      "rank": 2,
+      "metadata": {
+        "title": "Storage, Files, and Data Limits",
+        "source_type": "guide",
+        "category": "storage",
+        "version": "1.2",
+        "last_updated": "2025-07-15"
+      }
+    },
+    {
+      "chunk_id": "doc_pricing_001_chunk_001",
+      "doc_id": "doc_pricing_001",
+      "chunk_text": "per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a 99.5% uptime SLA. Enterprise Plan — Custom pricing The Enterprise plan is designed for organizations with more than 50 users or special compliance requirements. Features include all Business features plus: unlimited seats, 99.9% uptime SLA, dedicated infrastructure (optional), custom data residency, HIPAA BAA availability, 24/7 dedicated support with 1-hour response SLA for critical issues, SSO with SCIM provisioning, and custom integrations. Enterprise pricing is negotiated annually. Contact sales@novasaas.io for a quote. Free Trial A 14-day free trial of the Growth plan is available with no credit card required. All Growth features are available during the trial. After 14 days, accounts automatically downgrade to Starter. Nonprofit and Startup Discounts Registered nonprofits qualify for a 50% discount on any paid plan. Startups under 2 years old with fewer than 10 employees qualify for a 30% discount on the Growth plan. Contact sales@novasaas.io with supporting documentation.",
+      "score": 0.0754,
+      "rank": 3,
+      "metadata": {
+        "title": "Pricing Plans and Feature Tiers",
+        "source_type": "guide",
+        "category": "pricing",
+        "version": "3.1",
+        "last_updated": "2025-11-15"
+      }
+    },
+    {
+      "chunk_id": "doc_api_001_chunk_000",
+      "doc_id": "doc_api_001",
+      "chunk_text": "NovaSaaS API Developer Guidelines API Rate Limits NovaSaaS enforces rate limits to ensure platform stability and fair usage. Rate limits are applied per API token (not per IP address). Current limits: Starter plan — 1,000 requests per minute; Growth plan — 10,000 requests per minute; Business and Enterprise plans — 10,000 requests per minute (custom limits available on request). When the rate limit is exceeded, the API returns an HTTP 429 Too Many Requests response. The response includes a Retry-After header with the number of seconds until the rate limit resets, and a X-RateLimit-Remaining header with the number of remaining requests in the current window. Handling Rate Limit Errors Developers should implement exponential backoff when receiving 429 responses. A recommended approach: on the first 429, wait 1 second; double the wait time on each subsequent 429 (e.g., 1s, 2s, 4s, 8s) up to a maximum wait of 60 seconds. Add jitter (random delay ±10%) to prevent thundering herd. Permanent rate limit increases for legitimate high-volume use cases can be requested through the developer portal at developers.novasaas.io. API Versioning The current stable API version is v2. API v1 is deprecated and will be sunset on March 31, 2026. All new integrations",
+      "score": 0.0707,
+      "rank": 4,
+      "metadata": {
+        "title": "API Rate Limiting and Developer Guidelines",
+        "source_type": "guide",
+        "category": "api",
+        "version": "2.2",
+        "last_updated": "2025-10-20"
+      }
+    },
+    {
+      "chunk_id": "doc_onboarding_001_chunk_000",
+      "doc_id": "doc_onboarding_001",
+      "chunk_text": "NovaSaaS Onboarding Guide Getting Started After signing up, you will be guided through a 5-step onboarding wizard: (1) Create your workspace, (2) Invite team members, (3) Configure your first project, (4) Set up integrations, and (5) Explore the dashboard. The wizard can be skipped and revisited at any time from Settings > Onboarding. Inviting Users To invite users to your workspace, go to Settings > Members > Invite Members. Enter email addresses (comma-separated for bulk invites) and assign a role (Admin, Member, or Viewer). Invited users receive an email with a sign-up link valid for 72 hours. Admins can resend invitations from the Members page. Data Import and Migration NovaSaaS supports data migration from CSV, JSON, and Excel (XLSX) formats. The migration wizard is accessible from Settings > Data Import. The wizard guides users through field mapping, data validation, and preview before committing the import. For large datasets (more than 100,000 records), the Support team provides a managed migration service at no additional cost for Business and Enterprise customers. Supported source systems for automated migration include Salesforce, HubSpot, Notion, Airtable, and Monday.com. Notification Channels NovaSaaS supports email, Slack, and Microsoft Teams as notification channels for alerts and workflow automations. SMS",
+      "score": 0.0572,
+      "rank": 5,
+      "metadata": {
+        "title": "Onboarding Guide for New Workspaces",
+        "source_type": "guide",
+        "category": "onboarding",
+        "version": "4.0",
+        "last_updated": "2025-12-01"
+      }
+    }
+  ],
+  "retrieved_doc_ids": [
+    "doc_pricing_001",
+    "doc_storage_001",
+    "doc_api_001",
+    "doc_onboarding_001"
+  ],
+  "prompt_text": "You are a helpful support assistant for NovaSaaS, a B2B SaaS platform.\nAnswer the user's question using ONLY the information provided in the context below.\nBe concise and factual.\n\nCONTEXT:\nNovaSaaS Pricing Plans Starter Plan — Free The Starter plan is permanently free and supports up to 5 user seats. It includes the core project management features, 10 GB of storage, email support with 48-hour response SLA, and access to the NovaSaaS API at 1,000 requests per minute. The Starter plan does not include SSO, advanced analytics, or custom roles. Growth Plan — $29/seat/month The Growth plan supports up to 25 user seats. Additional seats can be purchased at $29 per seat per month. Features include all Starter features plus: 100 GB storage, priority email support with 12-hour response SLA, advanced analytics dashboard, webhook integrations, custom branding, and 10,000 API requests per minute. A 14-day free trial of the Growth plan is available with no credit card required. After 14 days, the account automatically downgrades to Starter unless a paid plan is selected. Business Plan — $49/seat/month The Business plan supports up to 50 user seats at $49 per seat per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a\n\nNovaSaaS Storage and Data Limits File Attachments NovaSaaS supports file attachments in projects, tasks, and messages. The maximum file size per attachment is 50 MB. Supported file types include documents (PDF, DOCX, XLSX, PPTX, TXT), images (PNG, JPG, GIF, WebP, SVG), audio (MP3, WAV), video (MP4, MOV up to 50 MB), and archives (ZIP, TAR.GZ). Files are scanned for malware upon upload. Malicious files are quarantined and the uploader is notified. Storage Quotas by Plan Starter plan: 10 GB total storage per workspace. Growth plan: 100 GB total storage per workspace. Business plan: 500 GB total storage per workspace. Enterprise plan: unlimited storage (subject to fair use policy). Storage usage is visible in Settings > Storage. Workspaces approaching 90% of their quota receive email notifications. Exceeding the quota prevents new file uploads until storage is freed or the plan is upgraded. Data Export Workspace admins can export all workspace data from Settings > Data > Export. Exports are available in JSON format (complete, machine-readable) or CSV format (flat, for spreadsheet analysis). Export jobs for large workspaces may take up to 24 hours. Completed export files are available for download for 7 days before automatic deletion. API-based data export is available\n\nper month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a 99.5% uptime SLA. Enterprise Plan — Custom pricing The Enterprise plan is designed for organizations with more than 50 users or special compliance requirements. Features include all Business features plus: unlimited seats, 99.9% uptime SLA, dedicated infrastructure (optional), custom data residency, HIPAA BAA availability, 24/7 dedicated support with 1-hour response SLA for critical issues, SSO with SCIM provisioning, and custom integrations. Enterprise pricing is negotiated annually. Contact sales@novasaas.io for a quote. Free Trial A 14-day free trial of the Growth plan is available with no credit card required. All Growth features are available during the trial. After 14 days, accounts automatically downgrade to Starter. Nonprofit and Startup Discounts Registered nonprofits qualify for a 50% discount on any paid plan. Startups under 2 years old with fewer than 10 employees qualify for a 30% discount on the Growth plan. Contact sales@novasaas.io with supporting documentation.\n\nNovaSaaS API Developer Guidelines API Rate Limits NovaSaaS enforces rate limits to ensure platform stability and fair usage. Rate limits are applied per API token (not per IP address). Current limits: Starter plan — 1,000 requests per minute; Growth plan — 10,000 requests per minute; Business and Enterprise plans — 10,000 requests per minute (custom limits available on request). When the rate limit is exceeded, the API returns an HTTP 429 Too Many Requests response. The response includes a Retry-After header with the number of seconds until the rate limit resets, and a X-RateLimit-Remaining header with the number of remaining requests in the current window. Handling Rate Limit Errors Developers should implement exponential backoff when receiving 429 responses. A recommended approach: on the first 429, wait 1 second; double the wait time on each subsequent 429 (e.g., 1s, 2s, 4s, 8s) up to a maximum wait of 60 seconds. Add jitter (random delay ±10%) to prevent thundering herd. Permanent rate limit increases for legitimate high-volume use cases can be requested through the developer portal at developers.novasaas.io. API Versioning The current stable API version is v2. API v1 is deprecated and will be sunset on March 31, 2026. All new integrations\n\nQUESTION: How many users can be added under the Starter plan?\n\nANSWER:",
+  "generated_answer": {
+    "answer_text": "I cannot answer this question based on the available documentation.",
+    "cited_chunk_ids": [],
+    "cited_doc_ids": [],
+    "abstained": true,
+    "prompt_strategy": "baseline",
+    "word_count": 10,
+    "token_count_estimate": 13
+  },
+  "metrics": {
+    "retrieval": {
+      "hit_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "context_precision": 0.4,
+      "context_recall": 1.0,
+      "retrieved_relevant_count": 1,
+      "retrieved_total_count": 5
+    },
+    "answer": {
+      "answer_relevance_score": 0.5,
+      "groundedness_score": 1.0,
+      "citation_coverage_score": 0.0,
+      "exact_match_proxy": 0.0,
+      "faithfulness_proxy": 1.0,
+      "hallucination_risk_score": 0.0,
+      "abstention_quality_score": 0.0,
+      "overall_score": 0.66
+    },
+    "latency_ms": 2.234600000520004,
+    "prompt_tokens_estimate": 1097,
+    "output_tokens_estimate": 13,
+    "estimated_cost_usd": 0.000569,
+    "failure_modes": [
+      "incorrect_abstention"
+    ],
+    "warnings": []
+  },
+  "config_snapshot": {
+    "experiment_id": "high_abstain_k5",
+    "top_k": 5,
+    "prompt_strategy": "baseline",
+    "embedding_backend": "tfidf",
+    "step_durations_ms": {
+      "retrieval": 1.32,
+      "prompt_building": 0.1,
+      "generation": 0.79
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

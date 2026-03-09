@@ -1,0 +1,145 @@
+{
+  "run_id": "0f0bfcc4-feb1-436b-ad5e-b9e39f5fc303",
+  "experiment_id": "grounded_k5",
+  "timestamp": "2026-03-09T17:28:27.116429",
+  "query": "What are the main differences between the Growth and Business plans?",
+  "example_id": "eval_012",
+  "prompt_strategy": "grounded",
+  "top_k": 5,
+  "embedding_backend": "tfidf",
+  "retrieved_chunks": [
+    {
+      "chunk_id": "doc_compliance_001_chunk_000",
+      "doc_id": "doc_compliance_001",
+      "chunk_text": "NovaSaaS Compliance and Privacy GDPR Compliance NovaSaaS is fully compliant with the General Data Protection Regulation (GDPR). We act as a data processor for customer data. A Data Processing Agreement (DPA) is available for all customers and is automatically included in the Enterprise contract. For Growth and Business customers, the DPA can be executed via the Trust Center at trust.novasaas.io. Data Subject Requests NovaSaaS provides a Data Subject Request (DSR) portal for EU residents to exercise their rights under GDPR, including: right of access, right to rectification, right to erasure (right to be forgotten), right to data portability, and right to restrict processing. Requests submitted through the portal are processed within 30 days. For urgent requests, contact privacy@novasaas.io. Data Residency By default, NovaSaaS stores all customer data in the United States (AWS us-east-1). Enterprise customers may request data residency in the European Union (AWS eu-west-1) or United Kingdom (AWS eu-west-2) at no additional charge. Data residency requests must be made during onboarding; migration of existing data incurs a one-time fee. HIPAA NovaSaaS supports HIPAA-compliant workflows for healthcare organizations on the Enterprise plan. A Business Associate Agreement (BAA) is available for Enterprise customers. HIPAA-compliant deployment requires enabling specific configuration settings documented",
+      "score": 0.0788,
+      "rank": 1,
+      "metadata": {
+        "title": "Compliance, Privacy, and Data Governance",
+        "source_type": "policy",
+        "category": "compliance",
+        "version": "1.8",
+        "last_updated": "2025-10-15"
+      }
+    },
+    {
+      "chunk_id": "doc_pricing_001_chunk_000",
+      "doc_id": "doc_pricing_001",
+      "chunk_text": "NovaSaaS Pricing Plans Starter Plan — Free The Starter plan is permanently free and supports up to 5 user seats. It includes the core project management features, 10 GB of storage, email support with 48-hour response SLA, and access to the NovaSaaS API at 1,000 requests per minute. The Starter plan does not include SSO, advanced analytics, or custom roles. Growth Plan — $29/seat/month The Growth plan supports up to 25 user seats. Additional seats can be purchased at $29 per seat per month. Features include all Starter features plus: 100 GB storage, priority email support with 12-hour response SLA, advanced analytics dashboard, webhook integrations, custom branding, and 10,000 API requests per minute. A 14-day free trial of the Growth plan is available with no credit card required. After 14 days, the account automatically downgrades to Starter unless a paid plan is selected. Business Plan — $49/seat/month The Business plan supports up to 50 user seats at $49 per seat per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a",
+      "score": 0.0699,
+      "rank": 2,
+      "metadata": {
+        "title": "Pricing Plans and Feature Tiers",
+        "source_type": "guide",
+        "category": "pricing",
+        "version": "3.1",
+        "last_updated": "2025-11-15"
+      }
+    },
+    {
+      "chunk_id": "doc_storage_001_chunk_001",
+      "doc_id": "doc_storage_001",
+      "chunk_text": "JSON format (complete, machine-readable) or CSV format (flat, for spreadsheet analysis). Export jobs for large workspaces may take up to 24 hours. Completed export files are available for download for 7 days before automatic deletion. API-based data export is available for Enterprise customers for programmatic data portability. Database Limits Individual records: maximum 1 MB per record (including all custom fields). Custom fields per project: up to 50 on Growth, 200 on Business and Enterprise. List items per project: up to 10,000 on Growth, unlimited on Business and Enterprise. API response size: up to 10 MB per response.",
+      "score": 0.062,
+      "rank": 3,
+      "metadata": {
+        "title": "Storage, Files, and Data Limits",
+        "source_type": "guide",
+        "category": "storage",
+        "version": "1.2",
+        "last_updated": "2025-07-15"
+      }
+    },
+    {
+      "chunk_id": "doc_pricing_001_chunk_001",
+      "doc_id": "doc_pricing_001",
+      "chunk_text": "per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a 99.5% uptime SLA. Enterprise Plan — Custom pricing The Enterprise plan is designed for organizations with more than 50 users or special compliance requirements. Features include all Business features plus: unlimited seats, 99.9% uptime SLA, dedicated infrastructure (optional), custom data residency, HIPAA BAA availability, 24/7 dedicated support with 1-hour response SLA for critical issues, SSO with SCIM provisioning, and custom integrations. Enterprise pricing is negotiated annually. Contact sales@novasaas.io for a quote. Free Trial A 14-day free trial of the Growth plan is available with no credit card required. All Growth features are available during the trial. After 14 days, accounts automatically downgrade to Starter. Nonprofit and Startup Discounts Registered nonprofits qualify for a 50% discount on any paid plan. Startups under 2 years old with fewer than 10 employees qualify for a 30% discount on the Growth plan. Contact sales@novasaas.io with supporting documentation.",
+      "score": 0.0525,
+      "rank": 4,
+      "metadata": {
+        "title": "Pricing Plans and Feature Tiers",
+        "source_type": "guide",
+        "category": "pricing",
+        "version": "3.1",
+        "last_updated": "2025-11-15"
+      }
+    },
+    {
+      "chunk_id": "doc_sla_001_chunk_000",
+      "doc_id": "doc_sla_001",
+      "chunk_text": "NovaSaaS Service Level Agreement (SLA) Uptime Commitments NovaSaaS commits to the following uptime SLAs by plan: Starter — best effort (no SLA guarantee); Growth — 99.5% monthly uptime; Business — 99.5% monthly uptime with email + phone support escalation; Enterprise — 99.9% monthly uptime with dedicated support. Uptime is measured as the percentage of minutes in a calendar month during which the NovaSaaS platform is available and responding to requests. Planned maintenance windows (communicated at least 48 hours in advance) are excluded from uptime calculations. SLA Credits If uptime falls below the committed level, customers are eligible for service credits: 99.0%–99.5% uptime → 10% credit; 95.0%–99.0% → 25% credit; below 95.0% → 50% credit. Credits are applied to the next invoice. To claim an SLA credit, submit a request within 30 days of the incident via the billing portal. Support Tiers Starter: Community forums and Help Center documentation only. No direct support SLA. Growth: Email support with 12-hour first-response SLA during business hours (9 AM–6 PM ET, Monday–Friday). Business: Priority email, phone, and chat support with 4-hour first-response SLA. Dedicated account manager assigned. Enterprise: 24/7 dedicated support channel with 1-hour first-response SLA for P1/critical issues. Dedicated technical account manager and",
+      "score": 0.043,
+      "rank": 5,
+      "metadata": {
+        "title": "Service Level Agreement and Support Tiers",
+        "source_type": "policy",
+        "category": "sla",
+        "version": "1.5",
+        "last_updated": "2025-08-30"
+      }
+    }
+  ],
+  "retrieved_doc_ids": [
+    "doc_compliance_001",
+    "doc_pricing_001",
+    "doc_storage_001",
+    "doc_sla_001"
+  ],
+  "prompt_text": "You are a precise support assistant for NovaSaaS. Your answers must be fully supported by the provided context passages.\n\nInstructions:\n- Answer using ONLY information found in the context.\n- After your answer, list the source chunk IDs you used as [Source: chunk_id].\n- If the context does not contain enough information to answer, respond with:\n  \"I cannot answer this question based on the available documentation.\"\n- Do NOT speculate or add information beyond the context.\n\nCONTEXT PASSAGES:\n[doc_compliance_001_chunk_000] NovaSaaS Compliance and Privacy GDPR Compliance NovaSaaS is fully compliant with the General Data Protection Regulation (GDPR). We act as a data processor for customer data. A Data Processing Agreement (DPA) is available for all customers and is automatically included in the Enterprise contract. For Growth and Business customers, the DPA can be executed via the Trust Center at trust.novasaas.io. Data Subject Requests NovaSaaS provides a Data Subject Request (DSR) portal for EU residents to exercise their rights under GDPR, including: right of access, right to rectification, right to erasure (right to be forgotten), right to data portability, and right to restrict processing. Requests submitted through the portal are processed within 30 days. For urgent requests, contact privacy@novasaas.io. Data Residency By default, NovaSaaS stores all customer data in the United States (AWS us-east-1). Enterprise customers may request data residency in the European Union (AWS eu-west-1) or United Kingdom (AWS eu-west-2) at no additional charge. Data residency requests must be made during onboarding; migration of existing data incurs a one-time fee. HIPAA NovaSaaS supports HIPAA-compliant workflows for healthcare organizations on the Enterprise plan. A Business Associate Agreement (BAA) is available for Enterprise customers. HIPAA-compliant deployment requires enabling specific configuration settings documented\n\n[doc_pricing_001_chunk_000] NovaSaaS Pricing Plans Starter Plan — Free The Starter plan is permanently free and supports up to 5 user seats. It includes the core project management features, 10 GB of storage, email support with 48-hour response SLA, and access to the NovaSaaS API at 1,000 requests per minute. The Starter plan does not include SSO, advanced analytics, or custom roles. Growth Plan — $29/seat/month The Growth plan supports up to 25 user seats. Additional seats can be purchased at $29 per seat per month. Features include all Starter features plus: 100 GB storage, priority email support with 12-hour response SLA, advanced analytics dashboard, webhook integrations, custom branding, and 10,000 API requests per minute. A 14-day free trial of the Growth plan is available with no credit card required. After 14 days, the account automatically downgrades to Starter unless a paid plan is selected. Business Plan — $49/seat/month The Business plan supports up to 50 user seats at $49 per seat per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a\n\n[doc_storage_001_chunk_001] JSON format (complete, machine-readable) or CSV format (flat, for spreadsheet analysis). Export jobs for large workspaces may take up to 24 hours. Completed export files are available for download for 7 days before automatic deletion. API-based data export is available for Enterprise customers for programmatic data portability. Database Limits Individual records: maximum 1 MB per record (including all custom fields). Custom fields per project: up to 50 on Growth, 200 on Business and Enterprise. List items per project: up to 10,000 on Growth, unlimited on Business and Enterprise. API response size: up to 10 MB per response.\n\n[doc_pricing_001_chunk_001] per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a 99.5% uptime SLA. Enterprise Plan — Custom pricing The Enterprise plan is designed for organizations with more than 50 users or special compliance requirements. Features include all Business features plus: unlimited seats, 99.9% uptime SLA, dedicated infrastructure (optional), custom data residency, HIPAA BAA availability, 24/7 dedicated support with 1-hour response SLA for critical issues, SSO with SCIM provisioning, and custom integrations. Enterprise pricing is negotiated annually. Contact sales@novasaas.io for a quote. Free Trial A 14-day free trial of the Growth plan is available with no credit card required. All Growth features are available during the trial. After 14 days, accounts automatically downgrade to Starter. Nonprofit and Startup Discounts Registered nonprofits qualify for a 50% discount on any paid plan. Startups under 2 years old with fewer than 10 employees qualify for a 30% discount on the Growth plan. Contact sales@novasaas.io with supporting documentation.\n\n[doc_sla_001_chunk_000] NovaSaaS Service Level Agreement (SLA) Uptime Commitments NovaSaaS commits to the following uptime SLAs by plan: Starter — best effort (no SLA guarantee); Growth — 99.5% monthly uptime; Business — 99.5% monthly uptime with email + phone support escalation; Enterprise — 99.9% monthly uptime with dedicated support. Uptime is measured as the percentage of minutes in a calendar month during which the NovaSaaS platform is available and responding to requests. Planned maintenance windows (communicated at least 48 hours in advance) are excluded from uptime calculations. SLA Credits If uptime falls below the committed level, customers are eligible for service credits: 99.0%–99.5% uptime → 10% credit; 95.0%–99.0% → 25% credit; below 95.0% → 50% credit. Credits are applied to the next...\n\nQUESTION: What are the main differences between the Growth and Business plans?\n\nANSWER (with citations):",
+  "generated_answer": {
+    "answer_text": "Completed export files are available for download for 7 days before automatic deletion. Custom fields per project: up to 50 on Growth, 200 on Business and Enterprise. List items per project: up to 10,000 on Growth, unlimited on Business and Enterprise. NovaSaaS Pricing Plans Starter Plan — Free The Starter plan is permanently free and supports up to 5 user seats. [Source: doc_storage_001_chunk_001], [Source: doc_pricing_001_chunk_000]",
+    "cited_chunk_ids": [
+      "doc_storage_001_chunk_001",
+      "doc_pricing_001_chunk_000"
+    ],
+    "cited_doc_ids": [
+      "doc_storage_001",
+      "doc_pricing_001"
+    ],
+    "abstained": false,
+    "prompt_strategy": "grounded",
+    "word_count": 65,
+    "token_count_estimate": 86
+  },
+  "metrics": {
+    "retrieval": {
+      "hit_at_k": 1.0,
+      "reciprocal_rank": 0.5,
+      "context_precision": 0.4,
+      "context_recall": 1.0,
+      "retrieved_relevant_count": 1,
+      "retrieved_total_count": 5
+    },
+    "answer": {
+      "answer_relevance_score": 0.48,
+      "groundedness_score": 0.628,
+      "citation_coverage_score": 1.0,
+      "exact_match_proxy": 0.2881,
+      "faithfulness_proxy": 0.452,
+      "hallucination_risk_score": 0.372,
+      "abstention_quality_score": 0.48,
+      "overall_score": 0.6582
+    },
+    "latency_ms": 2.0696999999927357,
+    "prompt_tokens_estimate": 1194,
+    "output_tokens_estimate": 86,
+    "estimated_cost_usd": 0.000727,
+    "failure_modes": [
+      "none"
+    ],
+    "warnings": []
+  },
+  "config_snapshot": {
+    "experiment_id": "grounded_k5",
+    "top_k": 5,
+    "prompt_strategy": "grounded",
+    "embedding_backend": "tfidf",
+    "step_durations_ms": {
+      "retrieval": 0.83,
+      "prompt_building": 0.11,
+      "generation": 1.13
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

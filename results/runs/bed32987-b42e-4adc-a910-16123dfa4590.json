@@ -1,0 +1,146 @@
+{
+  "run_id": "bed32987-b42e-4adc-a910-16123dfa4590",
+  "experiment_id": "grounded_k5",
+  "timestamp": "2026-03-09T17:28:27.249124",
+  "query": "Can I use NovaSaaS to store classified government data under ITAR regulations?",
+  "example_id": "eval_018",
+  "prompt_strategy": "grounded",
+  "top_k": 5,
+  "embedding_backend": "tfidf",
+  "retrieved_chunks": [
+    {
+      "chunk_id": "doc_api_001_chunk_001",
+      "doc_id": "doc_api_001",
+      "chunk_text": "limit increases for legitimate high-volume use cases can be requested through the developer portal at developers.novasaas.io. API Versioning The current stable API version is v2. API v1 is deprecated and will be sunset on March 31, 2026. All new integrations should use v2. Breaking changes in v2 will be communicated with at least 90 days notice via email to registered API users and the changelog at developers.novasaas.io/changelog. Authentication API tokens are generated in Settings > Developer > API Tokens. Tokens are scoped to specific permissions (read-only, read-write, admin). Best practices: rotate tokens every 90 days, use environment variables (not hardcoded strings) to store tokens, use the minimum required scope. OAuth 2.0 is available for third-party application developers. Error Codes HTTP 400 Bad Request: invalid parameters. HTTP 401 Unauthorized: missing or invalid API token. HTTP 403 Forbidden: token lacks required scope. HTTP 404 Not Found: resource does not exist. HTTP 422 Unprocessable Entity: validation error (details in response body). HTTP 429 Too Many Requests: rate limit exceeded. HTTP 500 Internal Server Error: NovaSaaS-side error (report to support). Pagination List endpoints return paginated results with a maximum of 100 items per page. Use the cursor parameter for cursor-based pagination (preferred) or page",
+      "score": 0.1016,
+      "rank": 1,
+      "metadata": {
+        "title": "API Rate Limiting and Developer Guidelines",
+        "source_type": "guide",
+        "category": "api",
+        "version": "2.2",
+        "last_updated": "2025-10-20"
+      }
+    },
+    {
+      "chunk_id": "doc_billing_001_chunk_001",
+      "doc_id": "doc_billing_001",
+      "chunk_text": "subscription, navigate to Settings > Billing > Subscription and click 'Cancel Subscription'. Cancellations take effect at the end of the current billing period. Your account data is retained for 30 days after cancellation before permanent deletion. You may reactivate your account within this window without losing data. Payment Methods NovaSaaS accepts Visa, Mastercard, American Express, and ACH transfers for annual plans. Invoiced billing is available for Enterprise plans. All payments are processed through Stripe. NovaSaaS does not store raw credit card data. Invoices and Receipts Invoices are automatically generated and emailed to the billing contact on each renewal date. Past invoices are available in Settings > Billing > Invoice History. For custom invoicing requirements, contact billing@novasaas.io. Failed Payments If a payment fails, NovaSaaS sends an email notification and retries the charge after 3, 7, and 14 days. After three failed attempts, the account is downgraded to the free tier. Service interruption notifications are sent 7 days before downgrade.",
+      "score": 0.0881,
+      "rank": 2,
+      "metadata": {
+        "title": "Billing & Subscription Management",
+        "source_type": "policy",
+        "category": "billing",
+        "version": "2.3",
+        "last_updated": "2025-10-01"
+      }
+    },
+    {
+      "chunk_id": "doc_data_policy_001_chunk_000",
+      "doc_id": "doc_data_policy_001",
+      "chunk_text": "NovaSaaS Data Lifecycle Policy Active Account Data All customer data in active accounts is stored indefinitely until explicitly deleted by the customer or until the account is cancelled. Customers retain full ownership of their data. NovaSaaS does not use customer data for training machine learning models or for advertising purposes. Account Cancellation and Data Deletion Upon account cancellation, NovaSaaS retains all workspace data for 30 days in a soft-deleted state. During this period, the account can be reactivated and all data fully restored. To request reactivation, contact support within the 30-day window. After 30 days, all data is permanently deleted from production databases, object storage, and CDN caches. Permanent deletion is irreversible. Compliance Archives Audit logs, access records, and security event logs are retained for 7 years as required by common regulatory frameworks (SOC 2, GDPR, HIPAA). These records are stored in an isolated, immutable compliance archive with restricted access. They are not available to customers directly but can be provided in response to legal process or regulatory requests. Right to Erasure (GDPR) EU residents may request erasure of their personal data via the Data Subject Request portal at trust.novasaas.io. Erasure requests are processed within 30 days. Erasure applies to",
+      "score": 0.0662,
+      "rank": 3,
+      "metadata": {
+        "title": "Data Lifecycle and Deletion Policy",
+        "source_type": "policy",
+        "category": "data_governance",
+        "version": "1.3",
+        "last_updated": "2025-09-05"
+      }
+    },
+    {
+      "chunk_id": "doc_storage_001_chunk_000",
+      "doc_id": "doc_storage_001",
+      "chunk_text": "NovaSaaS Storage and Data Limits File Attachments NovaSaaS supports file attachments in projects, tasks, and messages. The maximum file size per attachment is 50 MB. Supported file types include documents (PDF, DOCX, XLSX, PPTX, TXT), images (PNG, JPG, GIF, WebP, SVG), audio (MP3, WAV), video (MP4, MOV up to 50 MB), and archives (ZIP, TAR.GZ). Files are scanned for malware upon upload. Malicious files are quarantined and the uploader is notified. Storage Quotas by Plan Starter plan: 10 GB total storage per workspace. Growth plan: 100 GB total storage per workspace. Business plan: 500 GB total storage per workspace. Enterprise plan: unlimited storage (subject to fair use policy). Storage usage is visible in Settings > Storage. Workspaces approaching 90% of their quota receive email notifications. Exceeding the quota prevents new file uploads until storage is freed or the plan is upgraded. Data Export Workspace admins can export all workspace data from Settings > Data > Export. Exports are available in JSON format (complete, machine-readable) or CSV format (flat, for spreadsheet analysis). Export jobs for large workspaces may take up to 24 hours. Completed export files are available for download for 7 days before automatic deletion. API-based data export is available",
+      "score": 0.0488,
+      "rank": 4,
+      "metadata": {
+        "title": "Storage, Files, and Data Limits",
+        "source_type": "guide",
+        "category": "storage",
+        "version": "1.2",
+        "last_updated": "2025-07-15"
+      }
+    },
+    {
+      "chunk_id": "doc_api_001_chunk_002",
+      "doc_id": "doc_api_001",
+      "chunk_text": "Too Many Requests: rate limit exceeded. HTTP 500 Internal Server Error: NovaSaaS-side error (report to support). Pagination List endpoints return paginated results with a maximum of 100 items per page. Use the cursor parameter for cursor-based pagination (preferred) or page and per_page for offset-based pagination. The response includes next_cursor (or null if last page) and total_count.",
+      "score": 0.0484,
+      "rank": 5,
+      "metadata": {
+        "title": "API Rate Limiting and Developer Guidelines",
+        "source_type": "guide",
+        "category": "api",
+        "version": "2.2",
+        "last_updated": "2025-10-20"
+      }
+    }
+  ],
+  "retrieved_doc_ids": [
+    "doc_api_001",
+    "doc_billing_001",
+    "doc_data_policy_001",
+    "doc_storage_001"
+  ],
+  "prompt_text": "You are a precise support assistant for NovaSaaS. Your answers must be fully supported by the provided context passages.\n\nInstructions:\n- Answer using ONLY information found in the context.\n- After your answer, list the source chunk IDs you used as [Source: chunk_id].\n- If the context does not contain enough information to answer, respond with:\n  \"I cannot answer this question based on the available documentation.\"\n- Do NOT speculate or add information beyond the context.\n\nCONTEXT PASSAGES:\n[doc_api_001_chunk_001] limit increases for legitimate high-volume use cases can be requested through the developer portal at developers.novasaas.io. API Versioning The current stable API version is v2. API v1 is deprecated and will be sunset on March 31, 2026. All new integrations should use v2. Breaking changes in v2 will be communicated with at least 90 days notice via email to registered API users and the changelog at developers.novasaas.io/changelog. Authentication API tokens are generated in Settings > Developer > API Tokens. Tokens are scoped to specific permissions (read-only, read-write, admin). Best practices: rotate tokens every 90 days, use environment variables (not hardcoded strings) to store tokens, use the minimum required scope. OAuth 2.0 is available for third-party application developers. Error Codes HTTP 400 Bad Request: invalid parameters. HTTP 401 Unauthorized: missing or invalid API token. HTTP 403 Forbidden: token lacks required scope. HTTP 404 Not Found: resource does not exist. HTTP 422 Unprocessable Entity: validation error (details in response body). HTTP 429 Too Many Requests: rate limit exceeded. HTTP 500 Internal Server Error: NovaSaaS-side error (report to support). Pagination List endpoints return paginated results with a maximum of 100 items per page. Use the cursor parameter for cursor-based pagination (preferred) or page\n\n[doc_billing_001_chunk_001] subscription, navigate to Settings > Billing > Subscription and click 'Cancel Subscription'. Cancellations take effect at the end of the current billing period. Your account data is retained for 30 days after cancellation before permanent deletion. You may reactivate your account within this window without losing data. Payment Methods NovaSaaS accepts Visa, Mastercard, American Express, and ACH transfers for annual plans. Invoiced billing is available for Enterprise plans. All payments are processed through Stripe. NovaSaaS does not store raw credit card data. Invoices and Receipts Invoices are automatically generated and emailed to the billing contact on each renewal date. Past invoices are available in Settings > Billing > Invoice History. For custom invoicing requirements, contact billing@novasaas.io. Failed Payments If a payment fails, NovaSaaS sends an email notification and retries the charge after 3, 7, and 14 days. After three failed attempts, the account is downgraded to the free tier. Service interruption notifications are sent 7 days before downgrade.\n\n[doc_data_policy_001_chunk_000] NovaSaaS Data Lifecycle Policy Active Account Data All customer data in active accounts is stored indefinitely until explicitly deleted by the customer or until the account is cancelled. Customers retain full ownership of their data. NovaSaaS does not use customer data for training machine learning models or for advertising purposes. Account Cancellation and Data Deletion Upon account cancellation, NovaSaaS retains all workspace data for 30 days in a soft-deleted state. During this period, the account can be reactivated and all data fully restored. To request reactivation, contact support within the 30-day window. After 30 days, all data is permanently deleted from production databases, object storage, and CDN caches. Permanent deletion is irreversible. Compliance Archives Audit logs, access records, and security event logs are retained for 7 years as required by common regulatory frameworks (SOC 2, GDPR, HIPAA). These records are stored in an isolated, immutable compliance archive with restricted access. They are not available to customers directly but can be provided in response to legal process or regulatory requests. Right to Erasure (GDPR) EU residents may request erasure of their personal data via the Data Subject Request portal at trust.novasaas.io. Erasure requests are processed within 30 days. Erasure applies to\n\n[doc_storage_001_chunk_000] NovaSaaS Storage and Data Limits File Attachments NovaSaaS supports file attachments in projects, tasks, and messages. The maximum file size per attachment is 50 MB. Supported file types include documents (PDF, DOCX, XLSX, PPTX, TXT), images (PNG, JPG, GIF, WebP, SVG), audio (MP3, WAV), video (MP4, MOV up to 50 MB), and archives (ZIP, TAR.GZ). Files are scanned for malware upon upload. Malicious files are quarantined and the uploader is notified. Storage Quotas by Plan Starter plan: 10 GB total storage per workspace. Growth plan: 100 GB total storage per workspace. Business plan: 500 GB total storage per workspace. Enterprise plan: unlimited storage (subject to fair use policy). Storage usage is visible in Settings > Storage. Workspaces approaching 90% of their quota receive email notifications. Exceeding the quota prevents new file uploads until storage is freed or the plan is upgraded. Data Export Workspace admins can export all workspace data from Settings > Data > Export. Exports are available in JSON format (complete, machine-readable) or CSV format (flat, for spreadsheet analysis). Export jobs for large workspaces may take up to 24 hours. Completed export files are available for download for 7 days before automatic deletion. API-based data export is available\n\n[doc_api_001_chunk_002] Too Many Requests: rate limit exceeded. HTTP 500 Internal Server Error: NovaSaaS-side error (report to support). Pagination List endpoints return paginated results with a maximum of 100 items per page. Use the cursor parameter for cursor-based pagination (preferred) or page and per_page...\n\nQUESTION: Can I use NovaSaaS to store classified government data under ITAR regulations?\n\nANSWER (with citations):",
+  "generated_answer": {
+    "answer_text": "HTTP 500 Internal Server Error: NovaSaaS-side error (report to support). Use the cursor parameter for cursor-based pagination (preferred) or page and per_page for offset-based pagination. NovaSaaS Data Lifecycle Policy Active Account Data All customer data in active accounts is stored indefinitely until explicitly deleted by the customer or until the account is cancelled. Customers retain full ownership of their data. [Source: doc_api_001_chunk_002], [Source: doc_data_policy_001_chunk_000]",
+    "cited_chunk_ids": [
+      "doc_api_001_chunk_002",
+      "doc_data_policy_001_chunk_000"
+    ],
+    "cited_doc_ids": [
+      "doc_api_001",
+      "doc_data_policy_001"
+    ],
+    "abstained": false,
+    "prompt_strategy": "grounded",
+    "word_count": 64,
+    "token_count_estimate": 85
+  },
+  "metrics": {
+    "retrieval": {
+      "hit_at_k": 0.0,
+      "reciprocal_rank": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0,
+      "retrieved_relevant_count": 0,
+      "retrieved_total_count": 5
+    },
+    "answer": {
+      "answer_relevance_score": 0.2807,
+      "groundedness_score": 0.4838,
+      "citation_coverage_score": 0.0,
+      "exact_match_proxy": 0.1495,
+      "faithfulness_proxy": 0.4066,
+      "hallucination_risk_score": 0.5162,
+      "abstention_quality_score": 0.0,
+      "overall_score": 0.2177
+    },
+    "latency_ms": 1.8409000003885012,
+    "prompt_tokens_estimate": 1195,
+    "output_tokens_estimate": 85,
+    "estimated_cost_usd": 0.000726,
+    "failure_modes": [
+      "weak_retrieval",
+      "overconfident_answer"
+    ],
+    "warnings": []
+  },
+  "config_snapshot": {
+    "experiment_id": "grounded_k5",
+    "top_k": 5,
+    "prompt_strategy": "grounded",
+    "embedding_backend": "tfidf",
+    "step_durations_ms": {
+      "retrieval": 0.8,
+      "prompt_building": 0.07,
+      "generation": 0.96
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

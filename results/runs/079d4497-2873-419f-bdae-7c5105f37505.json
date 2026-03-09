@@ -1,0 +1,109 @@
+{
+  "run_id": "079d4497-2873-419f-bdae-7c5105f37505",
+  "experiment_id": "grounded_k3",
+  "timestamp": "2026-03-09T17:28:27.622324",
+  "query": "How do I cancel?",
+  "example_id": "eval_014",
+  "prompt_strategy": "grounded",
+  "top_k": 3,
+  "embedding_backend": "tfidf",
+  "retrieved_chunks": [
+    {
+      "chunk_id": "doc_billing_001_chunk_000",
+      "doc_id": "doc_billing_001",
+      "chunk_text": "NovaSaaS Billing & Subscription Management Overview NovaSaaS uses a seat-based monthly or annual billing model. All plans are billed in USD. Annual subscriptions receive a 20% discount compared to monthly rates. Refund Policy NovaSaaS offers a 30-day money-back guarantee for all subscription plans. Refund requests must be submitted through the billing portal within 30 days of the original charge. After 30 days, refunds are not available except at the discretion of the NovaSaaS billing team for exceptional circumstances. Annual subscriptions that are cancelled after 30 days receive prorated credit for unused months, applied to future invoices. Plan Changes and Upgrades Customers may upgrade their plan at any time. Upgrades take effect immediately and are billed prorated for the remainder of the current billing cycle. Plan downgrades are permitted but take effect at the next billing cycle. Customers will retain access to higher-tier features until the current cycle ends. Prorated refunds are not issued for downgrades. Cancellation To cancel your NovaSaaS subscription, navigate to Settings > Billing > Subscription and click 'Cancel Subscription'. Cancellations take effect at the end of the current billing period. Your account data is retained for 30 days after cancellation before permanent deletion. You may reactivate your",
+      "score": 0.1011,
+      "rank": 1,
+      "metadata": {
+        "title": "Billing & Subscription Management",
+        "source_type": "policy",
+        "category": "billing",
+        "version": "2.3",
+        "last_updated": "2025-10-01"
+      }
+    },
+    {
+      "chunk_id": "doc_billing_001_chunk_001",
+      "doc_id": "doc_billing_001",
+      "chunk_text": "subscription, navigate to Settings > Billing > Subscription and click 'Cancel Subscription'. Cancellations take effect at the end of the current billing period. Your account data is retained for 30 days after cancellation before permanent deletion. You may reactivate your account within this window without losing data. Payment Methods NovaSaaS accepts Visa, Mastercard, American Express, and ACH transfers for annual plans. Invoiced billing is available for Enterprise plans. All payments are processed through Stripe. NovaSaaS does not store raw credit card data. Invoices and Receipts Invoices are automatically generated and emailed to the billing contact on each renewal date. Past invoices are available in Settings > Billing > Invoice History. For custom invoicing requirements, contact billing@novasaas.io. Failed Payments If a payment fails, NovaSaaS sends an email notification and retries the charge after 3, 7, and 14 days. After three failed attempts, the account is downgraded to the free tier. Service interruption notifications are sent 7 days before downgrade.",
+      "score": 0.0689,
+      "rank": 2,
+      "metadata": {
+        "title": "Billing & Subscription Management",
+        "source_type": "policy",
+        "category": "billing",
+        "version": "2.3",
+        "last_updated": "2025-10-01"
+      }
+    },
+    {
+      "chunk_id": "doc_storage_001_chunk_001",
+      "doc_id": "doc_storage_001",
+      "chunk_text": "JSON format (complete, machine-readable) or CSV format (flat, for spreadsheet analysis). Export jobs for large workspaces may take up to 24 hours. Completed export files are available for download for 7 days before automatic deletion. API-based data export is available for Enterprise customers for programmatic data portability. Database Limits Individual records: maximum 1 MB per record (including all custom fields). Custom fields per project: up to 50 on Growth, 200 on Business and Enterprise. List items per project: up to 10,000 on Growth, unlimited on Business and Enterprise. API response size: up to 10 MB per response.",
+      "score": 0.0,
+      "rank": 3,
+      "metadata": {
+        "title": "Storage, Files, and Data Limits",
+        "source_type": "guide",
+        "category": "storage",
+        "version": "1.2",
+        "last_updated": "2025-07-15"
+      }
+    }
+  ],
+  "retrieved_doc_ids": [
+    "doc_billing_001",
+    "doc_storage_001"
+  ],
+  "prompt_text": "You are a precise support assistant for NovaSaaS. Your answers must be fully supported by the provided context passages.\n\nInstructions:\n- Answer using ONLY information found in the context.\n- After your answer, list the source chunk IDs you used as [Source: chunk_id].\n- If the context does not contain enough information to answer, respond with:\n  \"I cannot answer this question based on the available documentation.\"\n- Do NOT speculate or add information beyond the context.\n\nCONTEXT PASSAGES:\n[doc_billing_001_chunk_000] NovaSaaS Billing & Subscription Management Overview NovaSaaS uses a seat-based monthly or annual billing model. All plans are billed in USD. Annual subscriptions receive a 20% discount compared to monthly rates. Refund Policy NovaSaaS offers a 30-day money-back guarantee for all subscription plans. Refund requests must be submitted through the billing portal within 30 days of the original charge. After 30 days, refunds are not available except at the discretion of the NovaSaaS billing team for exceptional circumstances. Annual subscriptions that are cancelled after 30 days receive prorated credit for unused months, applied to future invoices. Plan Changes and Upgrades Customers may upgrade their plan at any time. Upgrades take effect immediately and are billed prorated for the remainder of the current billing cycle. Plan downgrades are permitted but take effect at the next billing cycle. Customers will retain access to higher-tier features until the current cycle ends. Prorated refunds are not issued for downgrades. Cancellation To cancel your NovaSaaS subscription, navigate to Settings > Billing > Subscription and click 'Cancel Subscription'. Cancellations take effect at the end of the current billing period. Your account data is retained for 30 days after cancellation before permanent deletion. You may reactivate your\n\n[doc_billing_001_chunk_001] subscription, navigate to Settings > Billing > Subscription and click 'Cancel Subscription'. Cancellations take effect at the end of the current billing period. Your account data is retained for 30 days after cancellation before permanent deletion. You may reactivate your account within this window without losing data. Payment Methods NovaSaaS accepts Visa, Mastercard, American Express, and ACH transfers for annual plans. Invoiced billing is available for Enterprise plans. All payments are processed through Stripe. NovaSaaS does not store raw credit card data. Invoices and Receipts Invoices are automatically generated and emailed to the billing contact on each renewal date. Past invoices are available in Settings > Billing > Invoice History. For custom invoicing requirements, contact billing@novasaas.io. Failed Payments If a payment fails, NovaSaaS sends an email notification and retries the charge after 3, 7, and 14 days. After three failed attempts, the account is downgraded to the free tier. Service interruption notifications are sent 7 days before downgrade.\n\n[doc_storage_001_chunk_001] JSON format (complete, machine-readable) or CSV format (flat, for spreadsheet analysis). Export jobs for large workspaces may take up to 24 hours. Completed export files are available for download for 7 days before automatic deletion. API-based data export is available for Enterprise customers for programmatic data portability. Database Limits Individual records: maximum 1 MB per record (including all custom fields). Custom fields per project: up to 50 on Growth, 200 on Business and Enterprise. List items per project: up to 10,000 on Growth, unlimited on Business and Enterprise. API response size: up to 10 MB per response.\n\nQUESTION: How do I cancel?\n\nANSWER (with citations):",
+  "generated_answer": {
+    "answer_text": "I cannot answer this question based on the available documentation.",
+    "cited_chunk_ids": [],
+    "cited_doc_ids": [],
+    "abstained": true,
+    "prompt_strategy": "grounded",
+    "word_count": 10,
+    "token_count_estimate": 13
+  },
+  "metrics": {
+    "retrieval": {
+      "hit_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "context_precision": 0.6667,
+      "context_recall": 1.0,
+      "retrieved_relevant_count": 1,
+      "retrieved_total_count": 3
+    },
+    "answer": {
+      "answer_relevance_score": 0.5,
+      "groundedness_score": 1.0,
+      "citation_coverage_score": 0.0,
+      "exact_match_proxy": 0.0,
+      "faithfulness_proxy": 1.0,
+      "hallucination_risk_score": 0.0,
+      "abstention_quality_score": 0.0,
+      "overall_score": 0.7
+    },
+    "latency_ms": 1.1563000007299706,
+    "prompt_tokens_estimate": 723,
+    "output_tokens_estimate": 13,
+    "estimated_cost_usd": 0.000382,
+    "failure_modes": [
+      "incorrect_abstention"
+    ],
+    "warnings": []
+  },
+  "config_snapshot": {
+    "experiment_id": "grounded_k3",
+    "top_k": 3,
+    "prompt_strategy": "grounded",
+    "embedding_backend": "tfidf",
+    "step_durations_ms": {
+      "retrieval": 0.77,
+      "prompt_building": 0.05,
+      "generation": 0.32
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

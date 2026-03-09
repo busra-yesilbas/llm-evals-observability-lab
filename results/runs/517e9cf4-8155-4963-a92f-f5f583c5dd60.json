@@ -1,0 +1,143 @@
+{
+  "run_id": "517e9cf4-8155-4963-a92f-f5f583c5dd60",
+  "experiment_id": "baseline",
+  "timestamp": "2026-03-09T17:28:18.247148",
+  "query": "A company with 12 employees needs SSO and 99.9% uptime. Which plan should they choose and what will it cost approximately?",
+  "example_id": "eval_009",
+  "prompt_strategy": "baseline",
+  "top_k": 5,
+  "embedding_backend": "tfidf",
+  "retrieved_chunks": [
+    {
+      "chunk_id": "doc_pricing_001_chunk_001",
+      "doc_id": "doc_pricing_001",
+      "chunk_text": "per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a 99.5% uptime SLA. Enterprise Plan — Custom pricing The Enterprise plan is designed for organizations with more than 50 users or special compliance requirements. Features include all Business features plus: unlimited seats, 99.9% uptime SLA, dedicated infrastructure (optional), custom data residency, HIPAA BAA availability, 24/7 dedicated support with 1-hour response SLA for critical issues, SSO with SCIM provisioning, and custom integrations. Enterprise pricing is negotiated annually. Contact sales@novasaas.io for a quote. Free Trial A 14-day free trial of the Growth plan is available with no credit card required. All Growth features are available during the trial. After 14 days, accounts automatically downgrade to Starter. Nonprofit and Startup Discounts Registered nonprofits qualify for a 50% discount on any paid plan. Startups under 2 years old with fewer than 10 employees qualify for a 30% discount on the Growth plan. Contact sales@novasaas.io with supporting documentation.",
+      "score": 0.188,
+      "rank": 1,
+      "metadata": {
+        "title": "Pricing Plans and Feature Tiers",
+        "source_type": "guide",
+        "category": "pricing",
+        "version": "3.1",
+        "last_updated": "2025-11-15"
+      }
+    },
+    {
+      "chunk_id": "doc_sla_001_chunk_000",
+      "doc_id": "doc_sla_001",
+      "chunk_text": "NovaSaaS Service Level Agreement (SLA) Uptime Commitments NovaSaaS commits to the following uptime SLAs by plan: Starter — best effort (no SLA guarantee); Growth — 99.5% monthly uptime; Business — 99.5% monthly uptime with email + phone support escalation; Enterprise — 99.9% monthly uptime with dedicated support. Uptime is measured as the percentage of minutes in a calendar month during which the NovaSaaS platform is available and responding to requests. Planned maintenance windows (communicated at least 48 hours in advance) are excluded from uptime calculations. SLA Credits If uptime falls below the committed level, customers are eligible for service credits: 99.0%–99.5% uptime → 10% credit; 95.0%–99.0% → 25% credit; below 95.0% → 50% credit. Credits are applied to the next invoice. To claim an SLA credit, submit a request within 30 days of the incident via the billing portal. Support Tiers Starter: Community forums and Help Center documentation only. No direct support SLA. Growth: Email support with 12-hour first-response SLA during business hours (9 AM–6 PM ET, Monday–Friday). Business: Priority email, phone, and chat support with 4-hour first-response SLA. Dedicated account manager assigned. Enterprise: 24/7 dedicated support channel with 1-hour first-response SLA for P1/critical issues. Dedicated technical account manager and",
+      "score": 0.1746,
+      "rank": 2,
+      "metadata": {
+        "title": "Service Level Agreement and Support Tiers",
+        "source_type": "policy",
+        "category": "sla",
+        "version": "1.5",
+        "last_updated": "2025-08-30"
+      }
+    },
+    {
+      "chunk_id": "doc_pricing_001_chunk_000",
+      "doc_id": "doc_pricing_001",
+      "chunk_text": "NovaSaaS Pricing Plans Starter Plan — Free The Starter plan is permanently free and supports up to 5 user seats. It includes the core project management features, 10 GB of storage, email support with 48-hour response SLA, and access to the NovaSaaS API at 1,000 requests per minute. The Starter plan does not include SSO, advanced analytics, or custom roles. Growth Plan — $29/seat/month The Growth plan supports up to 25 user seats. Additional seats can be purchased at $29 per seat per month. Features include all Starter features plus: 100 GB storage, priority email support with 12-hour response SLA, advanced analytics dashboard, webhook integrations, custom branding, and 10,000 API requests per minute. A 14-day free trial of the Growth plan is available with no credit card required. After 14 days, the account automatically downgrades to Starter unless a paid plan is selected. Business Plan — $49/seat/month The Business plan supports up to 50 user seats at $49 per seat per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a",
+      "score": 0.0685,
+      "rank": 3,
+      "metadata": {
+        "title": "Pricing Plans and Feature Tiers",
+        "source_type": "guide",
+        "category": "pricing",
+        "version": "3.1",
+        "last_updated": "2025-11-15"
+      }
+    },
+    {
+      "chunk_id": "doc_security_001_chunk_000",
+      "doc_id": "doc_security_001",
+      "chunk_text": "NovaSaaS Security Architecture Encryption All data stored in NovaSaaS is encrypted at rest using AES-256. Data in transit is protected using TLS 1.2 or higher. Encryption keys are managed through AWS KMS and rotated annually. Database backups are encrypted separately with a unique key per backup. Single Sign-On (SSO) NovaSaaS supports SAML 2.0-based SSO with the following identity providers: Okta, Azure Active Directory (Azure AD), Google Workspace, and OneLogin. SSO is available on the Business and Enterprise plans. To configure SSO, navigate to Settings > Security > Single Sign-On and follow the setup wizard. A test connection must be verified before SSO is enforced. SSO enforcement (blocking password login) is available on the Enterprise plan. SCIM Provisioning SCIM (System for Cross-domain Identity Management) provisioning allows automatic user creation, deprovisioning, and group sync from your identity provider. SCIM is available on the Business and Enterprise plans and supports Okta and Azure AD as SCIM providers. Multi-Factor Authentication (MFA) MFA is supported via TOTP authenticator apps (Google Authenticator, Authy, 1Password) and hardware security keys (FIDO2/WebAuthn). MFA enforcement across all users can be configured by workspace admins. SMS-based MFA is not supported due to SIM-swap risks. Role-Based Access Control NovaSaaS uses a role-based",
+      "score": 0.0512,
+      "rank": 4,
+      "metadata": {
+        "title": "Security Architecture and Access Control",
+        "source_type": "guide",
+        "category": "security",
+        "version": "2.0",
+        "last_updated": "2025-09-20"
+      }
+    },
+    {
+      "chunk_id": "doc_onboarding_001_chunk_001",
+      "doc_id": "doc_onboarding_001",
+      "chunk_text": "at no additional cost for Business and Enterprise customers. Supported source systems for automated migration include Salesforce, HubSpot, Notion, Airtable, and Monday.com. Notification Channels NovaSaaS supports email, Slack, and Microsoft Teams as notification channels for alerts and workflow automations. SMS notifications are available on the Enterprise plan. Webhook endpoints can also be configured as custom notification targets. Notification preferences are managed per-user in Profile > Notifications or globally by admins in Settings > Notifications. First Project Setup A project in NovaSaaS represents a unit of work (e.g., a team, a client, a product). Create your first project from the dashboard by clicking '+ New Project'. Configure project settings including access control, custom fields, and default workflow stages. Projects can be made public (visible to all workspace members) or private (invite-only). Getting Help In-app help is available by clicking the '?' icon in the sidebar. The NovaSaaS Help Center (help.novasaas.io) contains step-by-step guides, video tutorials, and a searchable knowledge base. For direct support, use the in-app chat widget or email support@novasaas.io.",
+      "score": 0.0302,
+      "rank": 5,
+      "metadata": {
+        "title": "Onboarding Guide for New Workspaces",
+        "source_type": "guide",
+        "category": "onboarding",
+        "version": "4.0",
+        "last_updated": "2025-12-01"
+      }
+    }
+  ],
+  "retrieved_doc_ids": [
+    "doc_pricing_001",
+    "doc_sla_001",
+    "doc_security_001",
+    "doc_onboarding_001"
+  ],
+  "prompt_text": "You are a helpful support assistant for NovaSaaS, a B2B SaaS platform.\nAnswer the user's question using ONLY the information provided in the context below.\nBe concise and factual.\n\nCONTEXT:\nper month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a 99.5% uptime SLA. Enterprise Plan — Custom pricing The Enterprise plan is designed for organizations with more than 50 users or special compliance requirements. Features include all Business features plus: unlimited seats, 99.9% uptime SLA, dedicated infrastructure (optional), custom data residency, HIPAA BAA availability, 24/7 dedicated support with 1-hour response SLA for critical issues, SSO with SCIM provisioning, and custom integrations. Enterprise pricing is negotiated annually. Contact sales@novasaas.io for a quote. Free Trial A 14-day free trial of the Growth plan is available with no credit card required. All Growth features are available during the trial. After 14 days, accounts automatically downgrade to Starter. Nonprofit and Startup Discounts Registered nonprofits qualify for a 50% discount on any paid plan. Startups under 2 years old with fewer than 10 employees qualify for a 30% discount on the Growth plan. Contact sales@novasaas.io with supporting documentation.\n\nNovaSaaS Service Level Agreement (SLA) Uptime Commitments NovaSaaS commits to the following uptime SLAs by plan: Starter — best effort (no SLA guarantee); Growth — 99.5% monthly uptime; Business — 99.5% monthly uptime with email + phone support escalation; Enterprise — 99.9% monthly uptime with dedicated support. Uptime is measured as the percentage of minutes in a calendar month during which the NovaSaaS platform is available and responding to requests. Planned maintenance windows (communicated at least 48 hours in advance) are excluded from uptime calculations. SLA Credits If uptime falls below the committed level, customers are eligible for service credits: 99.0%–99.5% uptime → 10% credit; 95.0%–99.0% → 25% credit; below 95.0% → 50% credit. Credits are applied to the next invoice. To claim an SLA credit, submit a request within 30 days of the incident via the billing portal. Support Tiers Starter: Community forums and Help Center documentation only. No direct support SLA. Growth: Email support with 12-hour first-response SLA during business hours (9 AM–6 PM ET, Monday–Friday). Business: Priority email, phone, and chat support with 4-hour first-response SLA. Dedicated account manager assigned. Enterprise: 24/7 dedicated support channel with 1-hour first-response SLA for P1/critical issues. Dedicated technical account manager and\n\nNovaSaaS Pricing Plans Starter Plan — Free The Starter plan is permanently free and supports up to 5 user seats. It includes the core project management features, 10 GB of storage, email support with 48-hour response SLA, and access to the NovaSaaS API at 1,000 requests per minute. The Starter plan does not include SSO, advanced analytics, or custom roles. Growth Plan — $29/seat/month The Growth plan supports up to 25 user seats. Additional seats can be purchased at $29 per seat per month. Features include all Starter features plus: 100 GB storage, priority email support with 12-hour response SLA, advanced analytics dashboard, webhook integrations, custom branding, and 10,000 API requests per minute. A 14-day free trial of the Growth plan is available with no credit card required. After 14 days, the account automatically downgrades to Starter unless a paid plan is selected. Business Plan — $49/seat/month The Business plan supports up to 50 user seats at $49 per seat per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a\n\nNovaSaaS Security Architecture Encryption All data stored in NovaSaaS is encrypted at rest using AES-256. Data in transit is protected using TLS 1.2 or higher. Encryption keys are managed through AWS KMS and rotated annually. Database backups are encrypted separately with a unique key per backup. Single Sign-On (SSO) NovaSaaS supports SAML 2.0-based SSO with the following identity providers: Okta, Azure Active Directory (Azure AD), Google Workspace, and OneLogin. SSO is available on the Business and Enterprise plans. To configure SSO, navigate to Settings > Security > Single Sign-On and follow the setup wizard. A test connection must be verified before SSO is enforced. SSO enforcement (blocking password login) is available on the Enterprise plan. SCIM Provisioning SCIM (System for Cross-domain Identity Management) provisioning allows automatic user creation, deprovisioning, and group sync from your identity provider. SCIM is available on the Business and Enterprise plans and supports Okta and Azure AD as SCIM providers. Multi-Factor Authentication (MFA) MFA is supported via TOTP authenticator apps (Google Authenticator, Authy, 1Password) and hardware security keys (FIDO2/WebAuthn). MFA enforcement across all users can be configured by workspace admins. SMS-based MFA is not supported due to SIM-swap risks. Role-Based Access Control NovaSaaS uses a role-based\n\nQUESTION: A company with 12 employees needs SSO and 99.9% uptime. Which plan should they choose and what will it cost approximately?\n\nANSWER:",
+  "generated_answer": {
+    "answer_text": "Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a 99.5% uptime SLA. Enterprise Plan — Custom pricing The Enterprise plan is designed for organizations with more than 50 users or special compliance requirements. Features include all Business features plus: unlimited seats, 99.9% uptime SLA, dedicated infrastructure (optional), custom data residency, HIPAA BAA availability, 24/7 dedicated support with 1-hour response SLA for critical issues, SSO with SCIM provisioning, and custom integrations.",
+    "cited_chunk_ids": [
+      "doc_pricing_001_chunk_001"
+    ],
+    "cited_doc_ids": [
+      "doc_pricing_001"
+    ],
+    "abstained": false,
+    "prompt_strategy": "baseline",
+    "word_count": 99,
+    "token_count_estimate": 131
+  },
+  "metrics": {
+    "retrieval": {
+      "hit_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "context_precision": 0.8,
+      "context_recall": 1.0,
+      "retrieved_relevant_count": 3,
+      "retrieved_total_count": 5
+    },
+    "answer": {
+      "answer_relevance_score": 0.3721,
+      "groundedness_score": 0.8152,
+      "citation_coverage_score": 0.3333,
+      "exact_match_proxy": 0.3038,
+      "faithfulness_proxy": 0.6795,
+      "hallucination_risk_score": 0.1848,
+      "abstention_quality_score": 0.3721,
+      "overall_score": 0.6662
+    },
+    "latency_ms": 2.00330000006943,
+    "prompt_tokens_estimate": 1111,
+    "output_tokens_estimate": 131,
+    "estimated_cost_usd": 0.000753,
+    "failure_modes": [
+      "none"
+    ],
+    "warnings": []
+  },
+  "config_snapshot": {
+    "experiment_id": "baseline",
+    "top_k": 5,
+    "prompt_strategy": "baseline",
+    "embedding_backend": "tfidf",
+    "step_durations_ms": {
+      "retrieval": 0.79,
+      "prompt_building": 0.09,
+      "generation": 1.11
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

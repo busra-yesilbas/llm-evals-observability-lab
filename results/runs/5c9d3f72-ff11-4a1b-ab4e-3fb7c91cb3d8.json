@@ -1,0 +1,143 @@
+{
+  "run_id": "5c9d3f72-ff11-4a1b-ab4e-3fb7c91cb3d8",
+  "experiment_id": "baseline_k5",
+  "timestamp": "2026-03-09T17:28:26.464275",
+  "query": "What notification channels does NovaSaaS support for alerts and workflows?",
+  "example_id": "eval_020",
+  "prompt_strategy": "baseline",
+  "top_k": 5,
+  "embedding_backend": "tfidf",
+  "retrieved_chunks": [
+    {
+      "chunk_id": "doc_onboarding_001_chunk_001",
+      "doc_id": "doc_onboarding_001",
+      "chunk_text": "at no additional cost for Business and Enterprise customers. Supported source systems for automated migration include Salesforce, HubSpot, Notion, Airtable, and Monday.com. Notification Channels NovaSaaS supports email, Slack, and Microsoft Teams as notification channels for alerts and workflow automations. SMS notifications are available on the Enterprise plan. Webhook endpoints can also be configured as custom notification targets. Notification preferences are managed per-user in Profile > Notifications or globally by admins in Settings > Notifications. First Project Setup A project in NovaSaaS represents a unit of work (e.g., a team, a client, a product). Create your first project from the dashboard by clicking '+ New Project'. Configure project settings including access control, custom fields, and default workflow stages. Projects can be made public (visible to all workspace members) or private (invite-only). Getting Help In-app help is available by clicking the '?' icon in the sidebar. The NovaSaaS Help Center (help.novasaas.io) contains step-by-step guides, video tutorials, and a searchable knowledge base. For direct support, use the in-app chat widget or email support@novasaas.io.",
+      "score": 0.1966,
+      "rank": 1,
+      "metadata": {
+        "title": "Onboarding Guide for New Workspaces",
+        "source_type": "guide",
+        "category": "onboarding",
+        "version": "4.0",
+        "last_updated": "2025-12-01"
+      }
+    },
+    {
+      "chunk_id": "doc_onboarding_001_chunk_000",
+      "doc_id": "doc_onboarding_001",
+      "chunk_text": "NovaSaaS Onboarding Guide Getting Started After signing up, you will be guided through a 5-step onboarding wizard: (1) Create your workspace, (2) Invite team members, (3) Configure your first project, (4) Set up integrations, and (5) Explore the dashboard. The wizard can be skipped and revisited at any time from Settings > Onboarding. Inviting Users To invite users to your workspace, go to Settings > Members > Invite Members. Enter email addresses (comma-separated for bulk invites) and assign a role (Admin, Member, or Viewer). Invited users receive an email with a sign-up link valid for 72 hours. Admins can resend invitations from the Members page. Data Import and Migration NovaSaaS supports data migration from CSV, JSON, and Excel (XLSX) formats. The migration wizard is accessible from Settings > Data Import. The wizard guides users through field mapping, data validation, and preview before committing the import. For large datasets (more than 100,000 records), the Support team provides a managed migration service at no additional cost for Business and Enterprise customers. Supported source systems for automated migration include Salesforce, HubSpot, Notion, Airtable, and Monday.com. Notification Channels NovaSaaS supports email, Slack, and Microsoft Teams as notification channels for alerts and workflow automations. SMS",
+      "score": 0.1594,
+      "rank": 2,
+      "metadata": {
+        "title": "Onboarding Guide for New Workspaces",
+        "source_type": "guide",
+        "category": "onboarding",
+        "version": "4.0",
+        "last_updated": "2025-12-01"
+      }
+    },
+    {
+      "chunk_id": "doc_compliance_001_chunk_001",
+      "doc_id": "doc_compliance_001",
+      "chunk_text": "during onboarding; migration of existing data incurs a one-time fee. HIPAA NovaSaaS supports HIPAA-compliant workflows for healthcare organizations on the Enterprise plan. A Business Associate Agreement (BAA) is available for Enterprise customers. HIPAA-compliant deployment requires enabling specific configuration settings documented in the Enterprise HIPAA guide. NovaSaaS does not claim HIPAA compliance for non-Enterprise plans. SOC 2 Type II NovaSaaS's SOC 2 Type II report covers the Security, Availability, and Confidentiality trust service criteria. The report is available to Enterprise customers under NDA. A summary of controls is publicly available at trust.novasaas.io. Data Retention Customer data is retained for the duration of the subscription plus 30 days after cancellation (soft-delete period). After 30 days, data is permanently deleted from production systems. Compliance archives (audit logs, access records) are retained for 7 years per regulatory requirements. Customers may request early deletion via the DSR portal. California Consumer Privacy Act (CCPA) NovaSaaS complies with CCPA. California residents may submit requests for data access, deletion, or opt-out of sale of personal information at trust.novasaas.io. NovaSaaS does not sell personal information to third parties.",
+      "score": 0.056,
+      "rank": 3,
+      "metadata": {
+        "title": "Compliance, Privacy, and Data Governance",
+        "source_type": "policy",
+        "category": "compliance",
+        "version": "1.8",
+        "last_updated": "2025-10-15"
+      }
+    },
+    {
+      "chunk_id": "doc_billing_001_chunk_001",
+      "doc_id": "doc_billing_001",
+      "chunk_text": "subscription, navigate to Settings > Billing > Subscription and click 'Cancel Subscription'. Cancellations take effect at the end of the current billing period. Your account data is retained for 30 days after cancellation before permanent deletion. You may reactivate your account within this window without losing data. Payment Methods NovaSaaS accepts Visa, Mastercard, American Express, and ACH transfers for annual plans. Invoiced billing is available for Enterprise plans. All payments are processed through Stripe. NovaSaaS does not store raw credit card data. Invoices and Receipts Invoices are automatically generated and emailed to the billing contact on each renewal date. Past invoices are available in Settings > Billing > Invoice History. For custom invoicing requirements, contact billing@novasaas.io. Failed Payments If a payment fails, NovaSaaS sends an email notification and retries the charge after 3, 7, and 14 days. After three failed attempts, the account is downgraded to the free tier. Service interruption notifications are sent 7 days before downgrade.",
+      "score": 0.0489,
+      "rank": 4,
+      "metadata": {
+        "title": "Billing & Subscription Management",
+        "source_type": "policy",
+        "category": "billing",
+        "version": "2.3",
+        "last_updated": "2025-10-01"
+      }
+    },
+    {
+      "chunk_id": "doc_integrations_001_chunk_002",
+      "doc_id": "doc_integrations_001",
+      "chunk_text": "Enterprise customers. It supports all core resource types and allows clients to request exactly the data they need, reducing over-fetching. Documentation is available at developers.novasaas.io/graphql. Zapier and Make NovaSaaS is available as a Zapier app with 200+ supported triggers and actions. A Make (formerly Integromat) module is also available. These low-code integration platforms are recommended for non-developers who need custom automation workflows.",
+      "score": 0.0466,
+      "rank": 5,
+      "metadata": {
+        "title": "Integrations and API Reference Overview",
+        "source_type": "guide",
+        "category": "integrations",
+        "version": "2.5",
+        "last_updated": "2025-11-01"
+      }
+    }
+  ],
+  "retrieved_doc_ids": [
+    "doc_onboarding_001",
+    "doc_compliance_001",
+    "doc_billing_001",
+    "doc_integrations_001"
+  ],
+  "prompt_text": "You are a helpful support assistant for NovaSaaS, a B2B SaaS platform.\nAnswer the user's question using ONLY the information provided in the context below.\nBe concise and factual.\n\nCONTEXT:\nat no additional cost for Business and Enterprise customers. Supported source systems for automated migration include Salesforce, HubSpot, Notion, Airtable, and Monday.com. Notification Channels NovaSaaS supports email, Slack, and Microsoft Teams as notification channels for alerts and workflow automations. SMS notifications are available on the Enterprise plan. Webhook endpoints can also be configured as custom notification targets. Notification preferences are managed per-user in Profile > Notifications or globally by admins in Settings > Notifications. First Project Setup A project in NovaSaaS represents a unit of work (e.g., a team, a client, a product). Create your first project from the dashboard by clicking '+ New Project'. Configure project settings including access control, custom fields, and default workflow stages. Projects can be made public (visible to all workspace members) or private (invite-only). Getting Help In-app help is available by clicking the '?' icon in the sidebar. The NovaSaaS Help Center (help.novasaas.io) contains step-by-step guides, video tutorials, and a searchable knowledge base. For direct support, use the in-app chat widget or email support@novasaas.io.\n\nNovaSaaS Onboarding Guide Getting Started After signing up, you will be guided through a 5-step onboarding wizard: (1) Create your workspace, (2) Invite team members, (3) Configure your first project, (4) Set up integrations, and (5) Explore the dashboard. The wizard can be skipped and revisited at any time from Settings > Onboarding. Inviting Users To invite users to your workspace, go to Settings > Members > Invite Members. Enter email addresses (comma-separated for bulk invites) and assign a role (Admin, Member, or Viewer). Invited users receive an email with a sign-up link valid for 72 hours. Admins can resend invitations from the Members page. Data Import and Migration NovaSaaS supports data migration from CSV, JSON, and Excel (XLSX) formats. The migration wizard is accessible from Settings > Data Import. The wizard guides users through field mapping, data validation, and preview before committing the import. For large datasets (more than 100,000 records), the Support team provides a managed migration service at no additional cost for Business and Enterprise customers. Supported source systems for automated migration include Salesforce, HubSpot, Notion, Airtable, and Monday.com. Notification Channels NovaSaaS supports email, Slack, and Microsoft Teams as notification channels for alerts and workflow automations. SMS\n\nduring onboarding; migration of existing data incurs a one-time fee. HIPAA NovaSaaS supports HIPAA-compliant workflows for healthcare organizations on the Enterprise plan. A Business Associate Agreement (BAA) is available for Enterprise customers. HIPAA-compliant deployment requires enabling specific configuration settings documented in the Enterprise HIPAA guide. NovaSaaS does not claim HIPAA compliance for non-Enterprise plans. SOC 2 Type II NovaSaaS's SOC 2 Type II report covers the Security, Availability, and Confidentiality trust service criteria. The report is available to Enterprise customers under NDA. A summary of controls is publicly available at trust.novasaas.io. Data Retention Customer data is retained for the duration of the subscription plus 30 days after cancellation (soft-delete period). After 30 days, data is permanently deleted from production systems. Compliance archives (audit logs, access records) are retained for 7 years per regulatory requirements. Customers may request early deletion via the DSR portal. California Consumer Privacy Act (CCPA) NovaSaaS complies with CCPA. California residents may submit requests for data access, deletion, or opt-out of sale of personal information at trust.novasaas.io. NovaSaaS does not sell personal information to third parties.\n\nsubscription, navigate to Settings > Billing > Subscription and click 'Cancel Subscription'. Cancellations take effect at the end of the current billing period. Your account data is retained for 30 days after cancellation before permanent deletion. You may reactivate your account within this window without losing data. Payment Methods NovaSaaS accepts Visa, Mastercard, American Express, and ACH transfers for annual plans. Invoiced billing is available for Enterprise plans. All payments are processed through Stripe. NovaSaaS does not store raw credit card data. Invoices and Receipts Invoices are automatically generated and emailed to the billing contact on each renewal date. Past invoices are available in Settings > Billing > Invoice History. For custom invoicing requirements, contact billing@novasaas.io. Failed Payments If a payment fails, NovaSaaS sends an email notification and retries the charge after 3, 7, and 14 days. After three failed attempts, the account is downgraded to the free tier. Service interruption notifications are sent 7 days before downgrade.\n\nEnterprise customers. It supports all core resource types and allows clients to request exactly the data they need, reducing over-fetching. Documentation is available at developers.novasaas.io/graphql. Zapier and Make NovaSaaS is available as a Zapier app with 200+ supported triggers and actions. A Make (formerly Integromat) module is also available. These low-code integration platforms are recommended for non-developers who need custom automation workflows.\n\nQUESTION: What notification channels does NovaSaaS support for alerts and workflows?\n\nANSWER:",
+  "generated_answer": {
+    "answer_text": "It supports all core resource types and allows clients to request exactly the data they need, reducing over-fetching. Documentation is available at developers.novasaas.io/graphql. Zapier and Make NovaSaaS is available as a Zapier app with 200+ supported triggers and actions. These low-code integration platforms are recommended for non-developers who need custom automation workflows.",
+    "cited_chunk_ids": [
+      "doc_integrations_001_chunk_002"
+    ],
+    "cited_doc_ids": [
+      "doc_integrations_001"
+    ],
+    "abstained": false,
+    "prompt_strategy": "baseline",
+    "word_count": 52,
+    "token_count_estimate": 69
+  },
+  "metrics": {
+    "retrieval": {
+      "hit_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "context_precision": 0.6,
+      "context_recall": 1.0,
+      "retrieved_relevant_count": 2,
+      "retrieved_total_count": 5
+    },
+    "answer": {
+      "answer_relevance_score": 0.2857,
+      "groundedness_score": 0.8737,
+      "citation_coverage_score": 0.5,
+      "exact_match_proxy": 0.1702,
+      "faithfulness_proxy": 0.473,
+      "hallucination_risk_score": 0.1263,
+      "abstention_quality_score": 0.2857,
+      "overall_score": 0.6379
+    },
+    "latency_ms": 1.5449999991687946,
+    "prompt_tokens_estimate": 1078,
+    "output_tokens_estimate": 69,
+    "estimated_cost_usd": 0.000643,
+    "failure_modes": [
+      "none"
+    ],
+    "warnings": []
+  },
+  "config_snapshot": {
+    "experiment_id": "baseline_k5",
+    "top_k": 5,
+    "prompt_strategy": "baseline",
+    "embedding_backend": "tfidf",
+    "step_durations_ms": {
+      "retrieval": 0.78,
+      "prompt_building": 0.07,
+      "generation": 0.69
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

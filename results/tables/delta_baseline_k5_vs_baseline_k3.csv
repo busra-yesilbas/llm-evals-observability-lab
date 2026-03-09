@@ -1,0 +1,10 @@
+metric,baseline_k5_mean,baseline_k3_mean,delta,delta_pct
+overall_score,0.5812,0.5925,0.0113,1.94
+answer_relevance,0.3602,0.3737,0.0135,3.74
+groundedness,0.7841,0.7294,-0.0547,-6.98
+citation_coverage,0.4667,0.4417,-0.025,-5.36
+faithfulness_proxy,0.5259,0.7162,0.1903,36.18
+hit_at_k,0.85,0.85,0.0,0.0
+reciprocal_rank,0.7333,0.7333,0.0,0.0
+context_precision,0.37,0.4833,0.1133,30.63
+context_recall,0.9,0.8333,-0.0667,-7.41

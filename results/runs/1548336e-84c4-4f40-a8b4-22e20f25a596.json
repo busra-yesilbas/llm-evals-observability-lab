@@ -1,0 +1,143 @@
+{
+  "run_id": "1548336e-84c4-4f40-a8b4-22e20f25a596",
+  "experiment_id": "baseline_k5",
+  "timestamp": "2026-03-09T17:28:26.083869",
+  "query": "What is the standard refund window for NovaSaaS subscriptions?",
+  "example_id": "eval_001",
+  "prompt_strategy": "baseline",
+  "top_k": 5,
+  "embedding_backend": "tfidf",
+  "retrieved_chunks": [
+    {
+      "chunk_id": "doc_billing_001_chunk_000",
+      "doc_id": "doc_billing_001",
+      "chunk_text": "NovaSaaS Billing & Subscription Management Overview NovaSaaS uses a seat-based monthly or annual billing model. All plans are billed in USD. Annual subscriptions receive a 20% discount compared to monthly rates. Refund Policy NovaSaaS offers a 30-day money-back guarantee for all subscription plans. Refund requests must be submitted through the billing portal within 30 days of the original charge. After 30 days, refunds are not available except at the discretion of the NovaSaaS billing team for exceptional circumstances. Annual subscriptions that are cancelled after 30 days receive prorated credit for unused months, applied to future invoices. Plan Changes and Upgrades Customers may upgrade their plan at any time. Upgrades take effect immediately and are billed prorated for the remainder of the current billing cycle. Plan downgrades are permitted but take effect at the next billing cycle. Customers will retain access to higher-tier features until the current cycle ends. Prorated refunds are not issued for downgrades. Cancellation To cancel your NovaSaaS subscription, navigate to Settings > Billing > Subscription and click 'Cancel Subscription'. Cancellations take effect at the end of the current billing period. Your account data is retained for 30 days after cancellation before permanent deletion. You may reactivate your",
+      "score": 0.1485,
+      "rank": 1,
+      "metadata": {
+        "title": "Billing & Subscription Management",
+        "source_type": "policy",
+        "category": "billing",
+        "version": "2.3",
+        "last_updated": "2025-10-01"
+      }
+    },
+    {
+      "chunk_id": "doc_billing_001_chunk_001",
+      "doc_id": "doc_billing_001",
+      "chunk_text": "subscription, navigate to Settings > Billing > Subscription and click 'Cancel Subscription'. Cancellations take effect at the end of the current billing period. Your account data is retained for 30 days after cancellation before permanent deletion. You may reactivate your account within this window without losing data. Payment Methods NovaSaaS accepts Visa, Mastercard, American Express, and ACH transfers for annual plans. Invoiced billing is available for Enterprise plans. All payments are processed through Stripe. NovaSaaS does not store raw credit card data. Invoices and Receipts Invoices are automatically generated and emailed to the billing contact on each renewal date. Past invoices are available in Settings > Billing > Invoice History. For custom invoicing requirements, contact billing@novasaas.io. Failed Payments If a payment fails, NovaSaaS sends an email notification and retries the charge after 3, 7, and 14 days. After three failed attempts, the account is downgraded to the free tier. Service interruption notifications are sent 7 days before downgrade.",
+      "score": 0.0405,
+      "rank": 2,
+      "metadata": {
+        "title": "Billing & Subscription Management",
+        "source_type": "policy",
+        "category": "billing",
+        "version": "2.3",
+        "last_updated": "2025-10-01"
+      }
+    },
+    {
+      "chunk_id": "doc_data_policy_001_chunk_000",
+      "doc_id": "doc_data_policy_001",
+      "chunk_text": "NovaSaaS Data Lifecycle Policy Active Account Data All customer data in active accounts is stored indefinitely until explicitly deleted by the customer or until the account is cancelled. Customers retain full ownership of their data. NovaSaaS does not use customer data for training machine learning models or for advertising purposes. Account Cancellation and Data Deletion Upon account cancellation, NovaSaaS retains all workspace data for 30 days in a soft-deleted state. During this period, the account can be reactivated and all data fully restored. To request reactivation, contact support within the 30-day window. After 30 days, all data is permanently deleted from production databases, object storage, and CDN caches. Permanent deletion is irreversible. Compliance Archives Audit logs, access records, and security event logs are retained for 7 years as required by common regulatory frameworks (SOC 2, GDPR, HIPAA). These records are stored in an isolated, immutable compliance archive with restricted access. They are not available to customers directly but can be provided in response to legal process or regulatory requests. Right to Erasure (GDPR) EU residents may request erasure of their personal data via the Data Subject Request portal at trust.novasaas.io. Erasure requests are processed within 30 days. Erasure applies to",
+      "score": 0.0365,
+      "rank": 3,
+      "metadata": {
+        "title": "Data Lifecycle and Deletion Policy",
+        "source_type": "policy",
+        "category": "data_governance",
+        "version": "1.3",
+        "last_updated": "2025-09-05"
+      }
+    },
+    {
+      "chunk_id": "doc_api_001_chunk_000",
+      "doc_id": "doc_api_001",
+      "chunk_text": "NovaSaaS API Developer Guidelines API Rate Limits NovaSaaS enforces rate limits to ensure platform stability and fair usage. Rate limits are applied per API token (not per IP address). Current limits: Starter plan — 1,000 requests per minute; Growth plan — 10,000 requests per minute; Business and Enterprise plans — 10,000 requests per minute (custom limits available on request). When the rate limit is exceeded, the API returns an HTTP 429 Too Many Requests response. The response includes a Retry-After header with the number of seconds until the rate limit resets, and a X-RateLimit-Remaining header with the number of remaining requests in the current window. Handling Rate Limit Errors Developers should implement exponential backoff when receiving 429 responses. A recommended approach: on the first 429, wait 1 second; double the wait time on each subsequent 429 (e.g., 1s, 2s, 4s, 8s) up to a maximum wait of 60 seconds. Add jitter (random delay ±10%) to prevent thundering herd. Permanent rate limit increases for legitimate high-volume use cases can be requested through the developer portal at developers.novasaas.io. API Versioning The current stable API version is v2. API v1 is deprecated and will be sunset on March 31, 2026. All new integrations",
+      "score": 0.0334,
+      "rank": 4,
+      "metadata": {
+        "title": "API Rate Limiting and Developer Guidelines",
+        "source_type": "guide",
+        "category": "api",
+        "version": "2.2",
+        "last_updated": "2025-10-20"
+      }
+    },
+    {
+      "chunk_id": "doc_integrations_001_chunk_002",
+      "doc_id": "doc_integrations_001",
+      "chunk_text": "Enterprise customers. It supports all core resource types and allows clients to request exactly the data they need, reducing over-fetching. Documentation is available at developers.novasaas.io/graphql. Zapier and Make NovaSaaS is available as a Zapier app with 200+ supported triggers and actions. A Make (formerly Integromat) module is also available. These low-code integration platforms are recommended for non-developers who need custom automation workflows.",
+      "score": 0.0117,
+      "rank": 5,
+      "metadata": {
+        "title": "Integrations and API Reference Overview",
+        "source_type": "guide",
+        "category": "integrations",
+        "version": "2.5",
+        "last_updated": "2025-11-01"
+      }
+    }
+  ],
+  "retrieved_doc_ids": [
+    "doc_billing_001",
+    "doc_data_policy_001",
+    "doc_api_001",
+    "doc_integrations_001"
+  ],
+  "prompt_text": "You are a helpful support assistant for NovaSaaS, a B2B SaaS platform.\nAnswer the user's question using ONLY the information provided in the context below.\nBe concise and factual.\n\nCONTEXT:\nNovaSaaS Billing & Subscription Management Overview NovaSaaS uses a seat-based monthly or annual billing model. All plans are billed in USD. Annual subscriptions receive a 20% discount compared to monthly rates. Refund Policy NovaSaaS offers a 30-day money-back guarantee for all subscription plans. Refund requests must be submitted through the billing portal within 30 days of the original charge. After 30 days, refunds are not available except at the discretion of the NovaSaaS billing team for exceptional circumstances. Annual subscriptions that are cancelled after 30 days receive prorated credit for unused months, applied to future invoices. Plan Changes and Upgrades Customers may upgrade their plan at any time. Upgrades take effect immediately and are billed prorated for the remainder of the current billing cycle. Plan downgrades are permitted but take effect at the next billing cycle. Customers will retain access to higher-tier features until the current cycle ends. Prorated refunds are not issued for downgrades. Cancellation To cancel your NovaSaaS subscription, navigate to Settings > Billing > Subscription and click 'Cancel Subscription'. Cancellations take effect at the end of the current billing period. Your account data is retained for 30 days after cancellation before permanent deletion. You may reactivate your\n\nsubscription, navigate to Settings > Billing > Subscription and click 'Cancel Subscription'. Cancellations take effect at the end of the current billing period. Your account data is retained for 30 days after cancellation before permanent deletion. You may reactivate your account within this window without losing data. Payment Methods NovaSaaS accepts Visa, Mastercard, American Express, and ACH transfers for annual plans. Invoiced billing is available for Enterprise plans. All payments are processed through Stripe. NovaSaaS does not store raw credit card data. Invoices and Receipts Invoices are automatically generated and emailed to the billing contact on each renewal date. Past invoices are available in Settings > Billing > Invoice History. For custom invoicing requirements, contact billing@novasaas.io. Failed Payments If a payment fails, NovaSaaS sends an email notification and retries the charge after 3, 7, and 14 days. After three failed attempts, the account is downgraded to the free tier. Service interruption notifications are sent 7 days before downgrade.\n\nNovaSaaS Data Lifecycle Policy Active Account Data All customer data in active accounts is stored indefinitely until explicitly deleted by the customer or until the account is cancelled. Customers retain full ownership of their data. NovaSaaS does not use customer data for training machine learning models or for advertising purposes. Account Cancellation and Data Deletion Upon account cancellation, NovaSaaS retains all workspace data for 30 days in a soft-deleted state. During this period, the account can be reactivated and all data fully restored. To request reactivation, contact support within the 30-day window. After 30 days, all data is permanently deleted from production databases, object storage, and CDN caches. Permanent deletion is irreversible. Compliance Archives Audit logs, access records, and security event logs are retained for 7 years as required by common regulatory frameworks (SOC 2, GDPR, HIPAA). These records are stored in an isolated, immutable compliance archive with restricted access. They are not available to customers directly but can be provided in response to legal process or regulatory requests. Right to Erasure (GDPR) EU residents may request erasure of their personal data via the Data Subject Request portal at trust.novasaas.io. Erasure requests are processed within 30 days. Erasure applies to\n\nNovaSaaS API Developer Guidelines API Rate Limits NovaSaaS enforces rate limits to ensure platform stability and fair usage. Rate limits are applied per API token (not per IP address). Current limits: Starter plan — 1,000 requests per minute; Growth plan — 10,000 requests per minute; Business and Enterprise plans — 10,000 requests per minute (custom limits available on request). When the rate limit is exceeded, the API returns an HTTP 429 Too Many Requests response. The response includes a Retry-After header with the number of seconds until the rate limit resets, and a X-RateLimit-Remaining header with the number of remaining requests in the current window. Handling Rate Limit Errors Developers should implement exponential backoff when receiving 429 responses. A recommended approach: on the first 429, wait 1 second; double the wait time on each subsequent 429 (e.g., 1s, 2s, 4s, 8s) up to a maximum wait of 60 seconds. Add jitter (random delay ±10%) to prevent thundering herd. Permanent rate limit increases for legitimate high-volume use cases can be requested through the developer portal at developers.novasaas.io. API Versioning The current stable API version is v2. API v1 is deprecated and will be sunset on March 31, 2026. All new integrations\n\nEnterprise customers. It supports all core resource types and allows clients to request exactly the data they need, reducing over-fetching. Documentation is available at developers.novasaas.io/graphql. Zapier and Make NovaSaaS is available as a Zapier app with 200+ supported triggers and actions. A...\n\nQUESTION: What is the standard refund window for NovaSaaS subscriptions?\n\nANSWER:",
+  "generated_answer": {
+    "answer_text": "It supports all core resource types and allows clients to request exactly the data they need, reducing over-fetching. Documentation is available at developers.novasaas.io/graphql. Zapier and Make NovaSaaS is available as a Zapier app with 200+ supported triggers and actions. A Make (formerly Integromat) module is also available.",
+    "cited_chunk_ids": [
+      "doc_integrations_001_chunk_002"
+    ],
+    "cited_doc_ids": [
+      "doc_integrations_001"
+    ],
+    "abstained": false,
+    "prompt_strategy": "baseline",
+    "word_count": 47,
+    "token_count_estimate": 62
+  },
+  "metrics": {
+    "retrieval": {
+      "hit_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "context_precision": 0.4,
+      "context_recall": 1.0,
+      "retrieved_relevant_count": 1,
+      "retrieved_total_count": 5
+    },
+    "answer": {
+      "answer_relevance_score": 0.2553,
+      "groundedness_score": 0.8336,
+      "citation_coverage_score": 0.0,
+      "exact_match_proxy": 0.1013,
+      "faithfulness_proxy": 0.3868,
+      "hallucination_risk_score": 0.1664,
+      "abstention_quality_score": 0.2553,
+      "overall_score": 0.5081
+    },
+    "latency_ms": 2.8176999985589646,
+    "prompt_tokens_estimate": 1118,
+    "output_tokens_estimate": 62,
+    "estimated_cost_usd": 0.000653,
+    "failure_modes": [
+      "missing_citation"
+    ],
+    "warnings": []
+  },
+  "config_snapshot": {
+    "experiment_id": "baseline_k5",
+    "top_k": 5,
+    "prompt_strategy": "baseline",
+    "embedding_backend": "tfidf",
+    "step_durations_ms": {
+      "retrieval": 1.61,
+      "prompt_building": 0.36,
+      "generation": 0.83
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

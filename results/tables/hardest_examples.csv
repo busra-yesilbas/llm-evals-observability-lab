@@ -1,0 +1,11 @@
+example_id,experiment_id,query,overall_score,groundedness,hit_at_k,failure_modes
+eval_018,grounded_k5,Can I use NovaSaaS to store classified government data under ITAR regulations?,0.2177,0.4838,0.0,weak_retrieval|overconfident_answer
+eval_018,grounded_k3,Can I use NovaSaaS to store classified government data under ITAR regulations?,0.2433,0.5919,0.0,weak_retrieval|overconfident_answer
+eval_018,baseline_k3,Can I use NovaSaaS to store classified government data under ITAR regulations?,0.2456,0.5936,0.0,weak_retrieval|overconfident_answer
+eval_018,baseline,Can I use NovaSaaS to store classified government data under ITAR regulations?,0.2465,0.585,0.0,weak_retrieval|overconfident_answer
+eval_018,baseline_k5,Can I use NovaSaaS to store classified government data under ITAR regulations?,0.2465,0.585,0.0,weak_retrieval|overconfident_answer
+eval_010,grounded_k3,"What are the steps to migrate data from a legacy CRM into NovaSaaS, and what data formats are supported?",0.4056,0.5998,1.0,missing_citation
+eval_010,baseline_k3,"What are the steps to migrate data from a legacy CRM into NovaSaaS, and what data formats are supported?",0.4085,0.6019,1.0,missing_citation
+eval_013,grounded_k5,How does NovaSaaS's webhook system compare to its native integrations in terms of flexibility and setup complexity?,0.4212,0.4239,1.0,none
+eval_013,baseline,How does NovaSaaS's webhook system compare to its native integrations in terms of flexibility and setup complexity?,0.4227,0.4251,1.0,none
+eval_013,baseline_k5,How does NovaSaaS's webhook system compare to its native integrations in terms of flexibility and setup complexity?,0.4227,0.4251,1.0,none

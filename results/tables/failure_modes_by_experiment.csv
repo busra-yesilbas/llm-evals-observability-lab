@@ -1,0 +1,7 @@
+experiment_id,incorrect_abstention,missing_citation,none,overconfident_answer,weak_retrieval
+baseline,2,5,10,3,1
+baseline_k3,2,6,9,3,1
+baseline_k5,2,5,10,3,1
+grounded_k3,2,6,9,3,1
+grounded_k5,2,5,10,3,1
+high_abstain_k5,15,0,4,0,1

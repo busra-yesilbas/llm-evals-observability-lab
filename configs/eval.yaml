@@ -1,0 +1,42 @@
+eval:
+  # Minimum number of eval examples to run
+  min_examples: 1
+
+  # Score weights for overall_score composite
+  score_weights:
+    answer_relevance: 0.20
+    groundedness: 0.25
+    citation_coverage: 0.15
+    context_precision: 0.15
+    context_recall: 0.15
+    faithfulness_proxy: 0.10
+
+  # Thresholds for pass/fail classification
+  thresholds:
+    answer_relevance_pass: 0.5
+    groundedness_pass: 0.5
+    citation_coverage_pass: 0.4
+    hallucination_risk_warn: 0.6   # warn if hallucination_risk above this
+    abstention_quality_pass: 0.6   # for unanswerable questions
+
+  # Failure mode detection
+  failure_modes:
+    unsupported_answer_threshold: 0.3    # groundedness below this
+    weak_retrieval_threshold: 0.3        # context_recall below this
+    missing_citation_threshold: 0.2     # citation_coverage below this
+    overconfident_answer_threshold: 0.7  # hallucination_risk above this
+    incomplete_answer_min_words: 10      # answer shorter than this in words
+
+  # Cost estimation (tokens)
+  cost:
+    # Fictional internal estimates (USD per 1k tokens); irrelevant in local mode
+    input_cost_per_1k: 0.0005
+    output_cost_per_1k: 0.0015
+    words_to_tokens_ratio: 1.33   # rough approximation
+
+  # Reporting
+  report:
+    include_per_example: true
+    include_aggregate: true
+    include_failure_analysis: true
+    top_k_failures: 10

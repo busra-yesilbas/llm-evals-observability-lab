@@ -1,0 +1,139 @@
+{
+  "run_id": "55524165-28ae-4834-ac51-5fb2cc63e26b",
+  "experiment_id": "high_abstain_k5",
+  "timestamp": "2026-03-09T17:28:28.135968",
+  "query": "Does NovaSaaS offer a free trial?",
+  "example_id": "eval_019",
+  "prompt_strategy": "baseline",
+  "top_k": 5,
+  "embedding_backend": "tfidf",
+  "retrieved_chunks": [
+    {
+      "chunk_id": "doc_pricing_001_chunk_001",
+      "doc_id": "doc_pricing_001",
+      "chunk_text": "per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a 99.5% uptime SLA. Enterprise Plan — Custom pricing The Enterprise plan is designed for organizations with more than 50 users or special compliance requirements. Features include all Business features plus: unlimited seats, 99.9% uptime SLA, dedicated infrastructure (optional), custom data residency, HIPAA BAA availability, 24/7 dedicated support with 1-hour response SLA for critical issues, SSO with SCIM provisioning, and custom integrations. Enterprise pricing is negotiated annually. Contact sales@novasaas.io for a quote. Free Trial A 14-day free trial of the Growth plan is available with no credit card required. All Growth features are available during the trial. After 14 days, accounts automatically downgrade to Starter. Nonprofit and Startup Discounts Registered nonprofits qualify for a 50% discount on any paid plan. Startups under 2 years old with fewer than 10 employees qualify for a 30% discount on the Growth plan. Contact sales@novasaas.io with supporting documentation.",
+      "score": 0.1518,
+      "rank": 1,
+      "metadata": {
+        "title": "Pricing Plans and Feature Tiers",
+        "source_type": "guide",
+        "category": "pricing",
+        "version": "3.1",
+        "last_updated": "2025-11-15"
+      }
+    },
+    {
+      "chunk_id": "doc_pricing_001_chunk_000",
+      "doc_id": "doc_pricing_001",
+      "chunk_text": "NovaSaaS Pricing Plans Starter Plan — Free The Starter plan is permanently free and supports up to 5 user seats. It includes the core project management features, 10 GB of storage, email support with 48-hour response SLA, and access to the NovaSaaS API at 1,000 requests per minute. The Starter plan does not include SSO, advanced analytics, or custom roles. Growth Plan — $29/seat/month The Growth plan supports up to 25 user seats. Additional seats can be purchased at $29 per seat per month. Features include all Starter features plus: 100 GB storage, priority email support with 12-hour response SLA, advanced analytics dashboard, webhook integrations, custom branding, and 10,000 API requests per minute. A 14-day free trial of the Growth plan is available with no credit card required. After 14 days, the account automatically downgrades to Starter unless a paid plan is selected. Business Plan — $49/seat/month The Business plan supports up to 50 user seats at $49 per seat per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a",
+      "score": 0.1206,
+      "rank": 2,
+      "metadata": {
+        "title": "Pricing Plans and Feature Tiers",
+        "source_type": "guide",
+        "category": "pricing",
+        "version": "3.1",
+        "last_updated": "2025-11-15"
+      }
+    },
+    {
+      "chunk_id": "doc_billing_001_chunk_001",
+      "doc_id": "doc_billing_001",
+      "chunk_text": "subscription, navigate to Settings > Billing > Subscription and click 'Cancel Subscription'. Cancellations take effect at the end of the current billing period. Your account data is retained for 30 days after cancellation before permanent deletion. You may reactivate your account within this window without losing data. Payment Methods NovaSaaS accepts Visa, Mastercard, American Express, and ACH transfers for annual plans. Invoiced billing is available for Enterprise plans. All payments are processed through Stripe. NovaSaaS does not store raw credit card data. Invoices and Receipts Invoices are automatically generated and emailed to the billing contact on each renewal date. Past invoices are available in Settings > Billing > Invoice History. For custom invoicing requirements, contact billing@novasaas.io. Failed Payments If a payment fails, NovaSaaS sends an email notification and retries the charge after 3, 7, and 14 days. After three failed attempts, the account is downgraded to the free tier. Service interruption notifications are sent 7 days before downgrade.",
+      "score": 0.0549,
+      "rank": 3,
+      "metadata": {
+        "title": "Billing & Subscription Management",
+        "source_type": "policy",
+        "category": "billing",
+        "version": "2.3",
+        "last_updated": "2025-10-01"
+      }
+    },
+    {
+      "chunk_id": "doc_compliance_001_chunk_001",
+      "doc_id": "doc_compliance_001",
+      "chunk_text": "during onboarding; migration of existing data incurs a one-time fee. HIPAA NovaSaaS supports HIPAA-compliant workflows for healthcare organizations on the Enterprise plan. A Business Associate Agreement (BAA) is available for Enterprise customers. HIPAA-compliant deployment requires enabling specific configuration settings documented in the Enterprise HIPAA guide. NovaSaaS does not claim HIPAA compliance for non-Enterprise plans. SOC 2 Type II NovaSaaS's SOC 2 Type II report covers the Security, Availability, and Confidentiality trust service criteria. The report is available to Enterprise customers under NDA. A summary of controls is publicly available at trust.novasaas.io. Data Retention Customer data is retained for the duration of the subscription plus 30 days after cancellation (soft-delete period). After 30 days, data is permanently deleted from production systems. Compliance archives (audit logs, access records) are retained for 7 years per regulatory requirements. Customers may request early deletion via the DSR portal. California Consumer Privacy Act (CCPA) NovaSaaS complies with CCPA. California residents may submit requests for data access, deletion, or opt-out of sale of personal information at trust.novasaas.io. NovaSaaS does not sell personal information to third parties.",
+      "score": 0.0392,
+      "rank": 4,
+      "metadata": {
+        "title": "Compliance, Privacy, and Data Governance",
+        "source_type": "policy",
+        "category": "compliance",
+        "version": "1.8",
+        "last_updated": "2025-10-15"
+      }
+    },
+    {
+      "chunk_id": "doc_integrations_001_chunk_001",
+      "doc_id": "doc_integrations_001",
+      "chunk_text": "Failed deliveries are logged in Settings > Webhooks > Delivery Logs. Compared to native integrations, webhooks offer greater flexibility and can connect NovaSaaS to any HTTP endpoint. However, they require developer configuration including payload parsing, signature verification, and error handling. For non-technical teams, native integrations are recommended. Webhooks are available on the Growth plan and above. REST API NovaSaaS provides a versioned REST API (current version: v2). API authentication is handled via Bearer tokens generated in Settings > Developer > API Tokens. All API responses use JSON. Rate limits: 1,000 requests per minute for Starter, 10,000 requests per minute for Growth and above. When the rate limit is exceeded, the API returns HTTP 429 Too Many Requests with a Retry-After header indicating when the next request may be made. Developers should implement exponential backoff for retry logic. Permanent rate limit increases can be requested through the developer portal at developers.novasaas.io. GraphQL API A GraphQL API is available in beta for Enterprise customers. It supports all core resource types and allows clients to request exactly the data they need, reducing over-fetching. Documentation is available at developers.novasaas.io/graphql. Zapier and Make NovaSaaS is available as a Zapier app with 200+ supported triggers and",
+      "score": 0.0382,
+      "rank": 5,
+      "metadata": {
+        "title": "Integrations and API Reference Overview",
+        "source_type": "guide",
+        "category": "integrations",
+        "version": "2.5",
+        "last_updated": "2025-11-01"
+      }
+    }
+  ],
+  "retrieved_doc_ids": [
+    "doc_pricing_001",
+    "doc_billing_001",
+    "doc_compliance_001",
+    "doc_integrations_001"
+  ],
+  "prompt_text": "You are a helpful support assistant for NovaSaaS, a B2B SaaS platform.\nAnswer the user's question using ONLY the information provided in the context below.\nBe concise and factual.\n\nCONTEXT:\nper month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a 99.5% uptime SLA. Enterprise Plan — Custom pricing The Enterprise plan is designed for organizations with more than 50 users or special compliance requirements. Features include all Business features plus: unlimited seats, 99.9% uptime SLA, dedicated infrastructure (optional), custom data residency, HIPAA BAA availability, 24/7 dedicated support with 1-hour response SLA for critical issues, SSO with SCIM provisioning, and custom integrations. Enterprise pricing is negotiated annually. Contact sales@novasaas.io for a quote. Free Trial A 14-day free trial of the Growth plan is available with no credit card required. All Growth features are available during the trial. After 14 days, accounts automatically downgrade to Starter. Nonprofit and Startup Discounts Registered nonprofits qualify for a 50% discount on any paid plan. Startups under 2 years old with fewer than 10 employees qualify for a 30% discount on the Growth plan. Contact sales@novasaas.io with supporting documentation.\n\nNovaSaaS Pricing Plans Starter Plan — Free The Starter plan is permanently free and supports up to 5 user seats. It includes the core project management features, 10 GB of storage, email support with 48-hour response SLA, and access to the NovaSaaS API at 1,000 requests per minute. The Starter plan does not include SSO, advanced analytics, or custom roles. Growth Plan — $29/seat/month The Growth plan supports up to 25 user seats. Additional seats can be purchased at $29 per seat per month. Features include all Starter features plus: 100 GB storage, priority email support with 12-hour response SLA, advanced analytics dashboard, webhook integrations, custom branding, and 10,000 API requests per minute. A 14-day free trial of the Growth plan is available with no credit card required. After 14 days, the account automatically downgrades to Starter unless a paid plan is selected. Business Plan — $49/seat/month The Business plan supports up to 50 user seats at $49 per seat per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a\n\nsubscription, navigate to Settings > Billing > Subscription and click 'Cancel Subscription'. Cancellations take effect at the end of the current billing period. Your account data is retained for 30 days after cancellation before permanent deletion. You may reactivate your account within this window without losing data. Payment Methods NovaSaaS accepts Visa, Mastercard, American Express, and ACH transfers for annual plans. Invoiced billing is available for Enterprise plans. All payments are processed through Stripe. NovaSaaS does not store raw credit card data. Invoices and Receipts Invoices are automatically generated and emailed to the billing contact on each renewal date. Past invoices are available in Settings > Billing > Invoice History. For custom invoicing requirements, contact billing@novasaas.io. Failed Payments If a payment fails, NovaSaaS sends an email notification and retries the charge after 3, 7, and 14 days. After three failed attempts, the account is downgraded to the free tier. Service interruption notifications are sent 7 days before downgrade.\n\nduring onboarding; migration of existing data incurs a one-time fee. HIPAA NovaSaaS supports HIPAA-compliant workflows for healthcare organizations on the Enterprise plan. A Business Associate Agreement (BAA) is available for Enterprise customers. HIPAA-compliant deployment requires enabling specific configuration settings documented in the Enterprise HIPAA guide. NovaSaaS does not claim HIPAA compliance for non-Enterprise plans. SOC 2 Type II NovaSaaS's SOC 2 Type II report covers the Security, Availability, and Confidentiality trust service criteria. The report is available to Enterprise customers under NDA. A summary of controls is publicly available at trust.novasaas.io. Data Retention Customer data is retained for the duration of the subscription plus 30 days after cancellation (soft-delete period). After 30 days, data is permanently deleted from production systems. Compliance archives (audit logs, access records) are retained for 7 years per regulatory requirements. Customers may request early deletion via the DSR portal. California Consumer Privacy Act (CCPA) NovaSaaS complies with CCPA. California residents may submit requests for data access, deletion, or opt-out of sale of personal information at trust.novasaas.io. NovaSaaS does not sell personal information to third parties.\n\nFailed deliveries are logged in Settings > Webhooks > Delivery Logs. Compared to native integrations, webhooks offer greater flexibility and can connect NovaSaaS to any HTTP endpoint. However, they require developer configuration including payload parsing, signature verification, and error handling. For non-technical teams, native integrations are recommended. Webhooks are available on the Growth plan and above. REST API NovaSaaS provides a versioned REST API (current version: v2). API authentication is handled via Bearer tokens generated in Settings > Developer >...\n\nQUESTION: Does NovaSaaS offer a free trial?\n\nANSWER:",
+  "generated_answer": {
+    "answer_text": "I cannot answer this question based on the available documentation.",
+    "cited_chunk_ids": [],
+    "cited_doc_ids": [],
+    "abstained": true,
+    "prompt_strategy": "baseline",
+    "word_count": 10,
+    "token_count_estimate": 13
+  },
+  "metrics": {
+    "retrieval": {
+      "hit_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "context_precision": 0.4,
+      "context_recall": 1.0,
+      "retrieved_relevant_count": 1,
+      "retrieved_total_count": 5
+    },
+    "answer": {
+      "answer_relevance_score": 0.5,
+      "groundedness_score": 1.0,
+      "citation_coverage_score": 0.0,
+      "exact_match_proxy": 0.0,
+      "faithfulness_proxy": 1.0,
+      "hallucination_risk_score": 0.0,
+      "abstention_quality_score": 0.0,
+      "overall_score": 0.66
+    },
+    "latency_ms": 1.5246000002662186,
+    "prompt_tokens_estimate": 1114,
+    "output_tokens_estimate": 13,
+    "estimated_cost_usd": 0.000577,
+    "failure_modes": [
+      "incorrect_abstention"
+    ],
+    "warnings": []
+  },
+  "config_snapshot": {
+    "experiment_id": "high_abstain_k5",
+    "top_k": 5,
+    "prompt_strategy": "baseline",
+    "embedding_backend": "tfidf",
+    "step_durations_ms": {
+      "retrieval": 0.77,
+      "prompt_building": 0.09,
+      "generation": 0.65
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

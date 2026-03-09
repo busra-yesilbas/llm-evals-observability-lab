@@ -1,0 +1,6 @@
+failure_mode,count,pct
+none,52,43.3
+missing_citation,27,22.5
+incorrect_abstention,25,20.8
+overconfident_answer,15,12.5
+weak_retrieval,6,5.0

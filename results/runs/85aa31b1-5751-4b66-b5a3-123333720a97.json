@@ -1,0 +1,142 @@
+{
+  "run_id": "85aa31b1-5751-4b66-b5a3-123333720a97",
+  "experiment_id": "baseline_k5",
+  "timestamp": "2026-03-09T17:28:26.226153",
+  "query": "Is NovaSaaS GDPR compliant? What mechanisms are provided for data subject requests?",
+  "example_id": "eval_008",
+  "prompt_strategy": "baseline",
+  "top_k": 5,
+  "embedding_backend": "tfidf",
+  "retrieved_chunks": [
+    {
+      "chunk_id": "doc_compliance_001_chunk_000",
+      "doc_id": "doc_compliance_001",
+      "chunk_text": "NovaSaaS Compliance and Privacy GDPR Compliance NovaSaaS is fully compliant with the General Data Protection Regulation (GDPR). We act as a data processor for customer data. A Data Processing Agreement (DPA) is available for all customers and is automatically included in the Enterprise contract. For Growth and Business customers, the DPA can be executed via the Trust Center at trust.novasaas.io. Data Subject Requests NovaSaaS provides a Data Subject Request (DSR) portal for EU residents to exercise their rights under GDPR, including: right of access, right to rectification, right to erasure (right to be forgotten), right to data portability, and right to restrict processing. Requests submitted through the portal are processed within 30 days. For urgent requests, contact privacy@novasaas.io. Data Residency By default, NovaSaaS stores all customer data in the United States (AWS us-east-1). Enterprise customers may request data residency in the European Union (AWS eu-west-1) or United Kingdom (AWS eu-west-2) at no additional charge. Data residency requests must be made during onboarding; migration of existing data incurs a one-time fee. HIPAA NovaSaaS supports HIPAA-compliant workflows for healthcare organizations on the Enterprise plan. A Business Associate Agreement (BAA) is available for Enterprise customers. HIPAA-compliant deployment requires enabling specific configuration settings documented",
+      "score": 0.2188,
+      "rank": 1,
+      "metadata": {
+        "title": "Compliance, Privacy, and Data Governance",
+        "source_type": "policy",
+        "category": "compliance",
+        "version": "1.8",
+        "last_updated": "2025-10-15"
+      }
+    },
+    {
+      "chunk_id": "doc_data_policy_001_chunk_001",
+      "doc_id": "doc_data_policy_001",
+      "chunk_text": "provided in response to legal process or regulatory requests. Right to Erasure (GDPR) EU residents may request erasure of their personal data via the Data Subject Request portal at trust.novasaas.io. Erasure requests are processed within 30 days. Erasure applies to personal data in production systems. Data retained in compliance archives for regulatory purposes may be retained beyond the erasure request, as permitted under GDPR Article 17(3)(b). Backup Retention Automated daily backups are retained for 30 days. Weekly backups are retained for 90 days. Monthly backups are retained for 1 year. Backups are stored in a separate AWS region from production data (cross-region replication). Backup restoration is available on request for Enterprise customers. Data Portability Customers may export their data at any time in machine-readable formats (JSON, CSV). See the Storage and Files guide for export instructions. NovaSaaS commits to providing data portability within 72 hours of a request.",
+      "score": 0.1375,
+      "rank": 2,
+      "metadata": {
+        "title": "Data Lifecycle and Deletion Policy",
+        "source_type": "policy",
+        "category": "data_governance",
+        "version": "1.3",
+        "last_updated": "2025-09-05"
+      }
+    },
+    {
+      "chunk_id": "doc_data_policy_001_chunk_000",
+      "doc_id": "doc_data_policy_001",
+      "chunk_text": "NovaSaaS Data Lifecycle Policy Active Account Data All customer data in active accounts is stored indefinitely until explicitly deleted by the customer or until the account is cancelled. Customers retain full ownership of their data. NovaSaaS does not use customer data for training machine learning models or for advertising purposes. Account Cancellation and Data Deletion Upon account cancellation, NovaSaaS retains all workspace data for 30 days in a soft-deleted state. During this period, the account can be reactivated and all data fully restored. To request reactivation, contact support within the 30-day window. After 30 days, all data is permanently deleted from production databases, object storage, and CDN caches. Permanent deletion is irreversible. Compliance Archives Audit logs, access records, and security event logs are retained for 7 years as required by common regulatory frameworks (SOC 2, GDPR, HIPAA). These records are stored in an isolated, immutable compliance archive with restricted access. They are not available to customers directly but can be provided in response to legal process or regulatory requests. Right to Erasure (GDPR) EU residents may request erasure of their personal data via the Data Subject Request portal at trust.novasaas.io. Erasure requests are processed within 30 days. Erasure applies to",
+      "score": 0.1248,
+      "rank": 3,
+      "metadata": {
+        "title": "Data Lifecycle and Deletion Policy",
+        "source_type": "policy",
+        "category": "data_governance",
+        "version": "1.3",
+        "last_updated": "2025-09-05"
+      }
+    },
+    {
+      "chunk_id": "doc_compliance_001_chunk_001",
+      "doc_id": "doc_compliance_001",
+      "chunk_text": "during onboarding; migration of existing data incurs a one-time fee. HIPAA NovaSaaS supports HIPAA-compliant workflows for healthcare organizations on the Enterprise plan. A Business Associate Agreement (BAA) is available for Enterprise customers. HIPAA-compliant deployment requires enabling specific configuration settings documented in the Enterprise HIPAA guide. NovaSaaS does not claim HIPAA compliance for non-Enterprise plans. SOC 2 Type II NovaSaaS's SOC 2 Type II report covers the Security, Availability, and Confidentiality trust service criteria. The report is available to Enterprise customers under NDA. A summary of controls is publicly available at trust.novasaas.io. Data Retention Customer data is retained for the duration of the subscription plus 30 days after cancellation (soft-delete period). After 30 days, data is permanently deleted from production systems. Compliance archives (audit logs, access records) are retained for 7 years per regulatory requirements. Customers may request early deletion via the DSR portal. California Consumer Privacy Act (CCPA) NovaSaaS complies with CCPA. California residents may submit requests for data access, deletion, or opt-out of sale of personal information at trust.novasaas.io. NovaSaaS does not sell personal information to third parties.",
+      "score": 0.0714,
+      "rank": 4,
+      "metadata": {
+        "title": "Compliance, Privacy, and Data Governance",
+        "source_type": "policy",
+        "category": "compliance",
+        "version": "1.8",
+        "last_updated": "2025-10-15"
+      }
+    },
+    {
+      "chunk_id": "doc_security_001_chunk_001",
+      "doc_id": "doc_security_001",
+      "chunk_text": "via TOTP authenticator apps (Google Authenticator, Authy, 1Password) and hardware security keys (FIDO2/WebAuthn). MFA enforcement across all users can be configured by workspace admins. SMS-based MFA is not supported due to SIM-swap risks. Role-Based Access Control NovaSaaS uses a role-based access control (RBAC) model. Built-in roles include Owner, Admin, Member, and Viewer. Custom roles with granular permissions are available on the Business and Enterprise plans. Permissions can be scoped to projects, workspaces, or organization level. Security Certifications NovaSaaS holds SOC 2 Type II certification, audited annually by a third-party auditor. The SOC 2 report is available to Enterprise customers upon NDA execution. NovaSaaS is also ISO 27001 certified (since 2024) and undergoes quarterly penetration testing by an independent security firm. Incident Response NovaSaaS maintains a 24/7 security operations center. In the event of a data breach, affected customers are notified within 72 hours per GDPR requirements. A full incident report is provided within 30 days. The incident response plan is reviewed and tested biannually.",
+      "score": 0.0528,
+      "rank": 5,
+      "metadata": {
+        "title": "Security Architecture and Access Control",
+        "source_type": "guide",
+        "category": "security",
+        "version": "2.0",
+        "last_updated": "2025-09-20"
+      }
+    }
+  ],
+  "retrieved_doc_ids": [
+    "doc_compliance_001",
+    "doc_data_policy_001",
+    "doc_security_001"
+  ],
+  "prompt_text": "You are a helpful support assistant for NovaSaaS, a B2B SaaS platform.\nAnswer the user's question using ONLY the information provided in the context below.\nBe concise and factual.\n\nCONTEXT:\nNovaSaaS Compliance and Privacy GDPR Compliance NovaSaaS is fully compliant with the General Data Protection Regulation (GDPR). We act as a data processor for customer data. A Data Processing Agreement (DPA) is available for all customers and is automatically included in the Enterprise contract. For Growth and Business customers, the DPA can be executed via the Trust Center at trust.novasaas.io. Data Subject Requests NovaSaaS provides a Data Subject Request (DSR) portal for EU residents to exercise their rights under GDPR, including: right of access, right to rectification, right to erasure (right to be forgotten), right to data portability, and right to restrict processing. Requests submitted through the portal are processed within 30 days. For urgent requests, contact privacy@novasaas.io. Data Residency By default, NovaSaaS stores all customer data in the United States (AWS us-east-1). Enterprise customers may request data residency in the European Union (AWS eu-west-1) or United Kingdom (AWS eu-west-2) at no additional charge. Data residency requests must be made during onboarding; migration of existing data incurs a one-time fee. HIPAA NovaSaaS supports HIPAA-compliant workflows for healthcare organizations on the Enterprise plan. A Business Associate Agreement (BAA) is available for Enterprise customers. HIPAA-compliant deployment requires enabling specific configuration settings documented\n\nprovided in response to legal process or regulatory requests. Right to Erasure (GDPR) EU residents may request erasure of their personal data via the Data Subject Request portal at trust.novasaas.io. Erasure requests are processed within 30 days. Erasure applies to personal data in production systems. Data retained in compliance archives for regulatory purposes may be retained beyond the erasure request, as permitted under GDPR Article 17(3)(b). Backup Retention Automated daily backups are retained for 30 days. Weekly backups are retained for 90 days. Monthly backups are retained for 1 year. Backups are stored in a separate AWS region from production data (cross-region replication). Backup restoration is available on request for Enterprise customers. Data Portability Customers may export their data at any time in machine-readable formats (JSON, CSV). See the Storage and Files guide for export instructions. NovaSaaS commits to providing data portability within 72 hours of a request.\n\nNovaSaaS Data Lifecycle Policy Active Account Data All customer data in active accounts is stored indefinitely until explicitly deleted by the customer or until the account is cancelled. Customers retain full ownership of their data. NovaSaaS does not use customer data for training machine learning models or for advertising purposes. Account Cancellation and Data Deletion Upon account cancellation, NovaSaaS retains all workspace data for 30 days in a soft-deleted state. During this period, the account can be reactivated and all data fully restored. To request reactivation, contact support within the 30-day window. After 30 days, all data is permanently deleted from production databases, object storage, and CDN caches. Permanent deletion is irreversible. Compliance Archives Audit logs, access records, and security event logs are retained for 7 years as required by common regulatory frameworks (SOC 2, GDPR, HIPAA). These records are stored in an isolated, immutable compliance archive with restricted access. They are not available to customers directly but can be provided in response to legal process or regulatory requests. Right to Erasure (GDPR) EU residents may request erasure of their personal data via the Data Subject Request portal at trust.novasaas.io. Erasure requests are processed within 30 days. Erasure applies to\n\nduring onboarding; migration of existing data incurs a one-time fee. HIPAA NovaSaaS supports HIPAA-compliant workflows for healthcare organizations on the Enterprise plan. A Business Associate Agreement (BAA) is available for Enterprise customers. HIPAA-compliant deployment requires enabling specific configuration settings documented in the Enterprise HIPAA guide. NovaSaaS does not claim HIPAA compliance for non-Enterprise plans. SOC 2 Type II NovaSaaS's SOC 2 Type II report covers the Security, Availability, and Confidentiality trust service criteria. The report is available to Enterprise customers under NDA. A summary of controls is publicly available at trust.novasaas.io. Data Retention Customer data is retained for the duration of the subscription plus 30 days after cancellation (soft-delete period). After 30 days, data is permanently deleted from production systems. Compliance archives (audit logs, access records) are retained for 7 years per regulatory requirements. Customers may request early deletion via the DSR portal. California Consumer Privacy Act (CCPA) NovaSaaS complies with CCPA. California residents may submit requests for data access, deletion, or opt-out of sale of personal information at trust.novasaas.io. NovaSaaS does not sell personal information to third parties.\n\nvia TOTP authenticator apps (Google Authenticator, Authy, 1Password) and hardware security keys (FIDO2/WebAuthn). MFA enforcement across all users can be configured by workspace admins. SMS-based MFA is not supported due to SIM-swap risks. Role-Based Access Control NovaSaaS uses a role-based access control (RBAC) model. Built-in roles include Owner, Admin, Member, and Viewer. Custom roles with granular permissions are available on the Business and Enterprise plans. Permissions can be scoped to projects, workspaces, or...\n\nQUESTION: Is NovaSaaS GDPR compliant? What mechanisms are provided for data subject requests?\n\nANSWER:",
+  "generated_answer": {
+    "answer_text": "provided in response to legal process or regulatory requests. Right to Erasure (GDPR) EU residents may request erasure of their personal data via the Data Subject Request portal at trust.novasaas.io. Erasure requests are processed within 30 days. Erasure applies to personal data in production systems.",
+    "cited_chunk_ids": [
+      "doc_data_policy_001_chunk_001"
+    ],
+    "cited_doc_ids": [
+      "doc_data_policy_001"
+    ],
+    "abstained": false,
+    "prompt_strategy": "baseline",
+    "word_count": 45,
+    "token_count_estimate": 59
+  },
+  "metrics": {
+    "retrieval": {
+      "hit_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "context_precision": 0.4,
+      "context_recall": 1.0,
+      "retrieved_relevant_count": 1,
+      "retrieved_total_count": 5
+    },
+    "answer": {
+      "answer_relevance_score": 0.6829,
+      "groundedness_score": 0.601,
+      "citation_coverage_score": 0.0,
+      "exact_match_proxy": 0.375,
+      "faithfulness_proxy": 0.3706,
+      "hallucination_risk_score": 0.399,
+      "abstention_quality_score": 0.6829,
+      "overall_score": 0.5339
+    },
+    "latency_ms": 1.9394999999349238,
+    "prompt_tokens_estimate": 1122,
+    "output_tokens_estimate": 59,
+    "estimated_cost_usd": 0.000651,
+    "failure_modes": [
+      "missing_citation"
+    ],
+    "warnings": []
+  },
+  "config_snapshot": {
+    "experiment_id": "baseline_k5",
+    "top_k": 5,
+    "prompt_strategy": "baseline",
+    "embedding_backend": "tfidf",
+    "step_durations_ms": {
+      "retrieval": 0.91,
+      "prompt_building": 0.09,
+      "generation": 0.93
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

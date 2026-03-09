@@ -1,0 +1,113 @@
+{
+  "run_id": "bfbe1ad5-f557-471e-a5e3-7f69650ff394",
+  "experiment_id": "grounded_k3",
+  "timestamp": "2026-03-09T17:28:27.600307",
+  "query": "How does NovaSaaS's webhook system compare to its native integrations in terms of flexibility and setup complexity?",
+  "example_id": "eval_013",
+  "prompt_strategy": "grounded",
+  "top_k": 3,
+  "embedding_backend": "tfidf",
+  "retrieved_chunks": [
+    {
+      "chunk_id": "doc_integrations_001_chunk_000",
+      "doc_id": "doc_integrations_001",
+      "chunk_text": "NovaSaaS Integrations Native Integrations NovaSaaS offers 50+ native integrations with popular business tools. One-click integration setup is available for: Slack, Microsoft Teams, Google Workspace, Zoom, Salesforce, HubSpot, Zendesk, Jira, GitHub, GitLab, Figma, Dropbox, Box, Google Drive, OneDrive, Stripe, QuickBooks, and many others. Native integrations include automatic field mapping and do not require developer configuration. Integration management is available at Settings > Integrations. Webhooks Webhooks allow NovaSaaS to send real-time HTTP POST notifications to any external URL when specific events occur. Webhooks are useful for integrating with custom applications or systems not available in the native integration library. Webhook setup requires: (1) providing the target HTTP endpoint URL, (2) selecting the event types to subscribe to, (3) optionally configuring a secret for signature verification. NovaSaaS signs webhook payloads with an HMAC-SHA256 signature in the X-NovaSaaS-Signature header. Developers should verify this signature to prevent spoofed requests. Error handling and retries: NovaSaaS retries failed webhook deliveries up to 5 times with exponential backoff. Failed deliveries are logged in Settings > Webhooks > Delivery Logs. Compared to native integrations, webhooks offer greater flexibility and can connect NovaSaaS to any HTTP endpoint. However, they require developer configuration including payload parsing, signature verification, and error handling.",
+      "score": 0.2419,
+      "rank": 1,
+      "metadata": {
+        "title": "Integrations and API Reference Overview",
+        "source_type": "guide",
+        "category": "integrations",
+        "version": "2.5",
+        "last_updated": "2025-11-01"
+      }
+    },
+    {
+      "chunk_id": "doc_integrations_001_chunk_001",
+      "doc_id": "doc_integrations_001",
+      "chunk_text": "Failed deliveries are logged in Settings > Webhooks > Delivery Logs. Compared to native integrations, webhooks offer greater flexibility and can connect NovaSaaS to any HTTP endpoint. However, they require developer configuration including payload parsing, signature verification, and error handling. For non-technical teams, native integrations are recommended. Webhooks are available on the Growth plan and above. REST API NovaSaaS provides a versioned REST API (current version: v2). API authentication is handled via Bearer tokens generated in Settings > Developer > API Tokens. All API responses use JSON. Rate limits: 1,000 requests per minute for Starter, 10,000 requests per minute for Growth and above. When the rate limit is exceeded, the API returns HTTP 429 Too Many Requests with a Retry-After header indicating when the next request may be made. Developers should implement exponential backoff for retry logic. Permanent rate limit increases can be requested through the developer portal at developers.novasaas.io. GraphQL API A GraphQL API is available in beta for Enterprise customers. It supports all core resource types and allows clients to request exactly the data they need, reducing over-fetching. Documentation is available at developers.novasaas.io/graphql. Zapier and Make NovaSaaS is available as a Zapier app with 200+ supported triggers and",
+      "score": 0.1425,
+      "rank": 2,
+      "metadata": {
+        "title": "Integrations and API Reference Overview",
+        "source_type": "guide",
+        "category": "integrations",
+        "version": "2.5",
+        "last_updated": "2025-11-01"
+      }
+    },
+    {
+      "chunk_id": "doc_onboarding_001_chunk_001",
+      "doc_id": "doc_onboarding_001",
+      "chunk_text": "at no additional cost for Business and Enterprise customers. Supported source systems for automated migration include Salesforce, HubSpot, Notion, Airtable, and Monday.com. Notification Channels NovaSaaS supports email, Slack, and Microsoft Teams as notification channels for alerts and workflow automations. SMS notifications are available on the Enterprise plan. Webhook endpoints can also be configured as custom notification targets. Notification preferences are managed per-user in Profile > Notifications or globally by admins in Settings > Notifications. First Project Setup A project in NovaSaaS represents a unit of work (e.g., a team, a client, a product). Create your first project from the dashboard by clicking '+ New Project'. Configure project settings including access control, custom fields, and default workflow stages. Projects can be made public (visible to all workspace members) or private (invite-only). Getting Help In-app help is available by clicking the '?' icon in the sidebar. The NovaSaaS Help Center (help.novasaas.io) contains step-by-step guides, video tutorials, and a searchable knowledge base. For direct support, use the in-app chat widget or email support@novasaas.io.",
+      "score": 0.0494,
+      "rank": 3,
+      "metadata": {
+        "title": "Onboarding Guide for New Workspaces",
+        "source_type": "guide",
+        "category": "onboarding",
+        "version": "4.0",
+        "last_updated": "2025-12-01"
+      }
+    }
+  ],
+  "retrieved_doc_ids": [
+    "doc_integrations_001",
+    "doc_onboarding_001"
+  ],
+  "prompt_text": "You are a precise support assistant for NovaSaaS. Your answers must be fully supported by the provided context passages.\n\nInstructions:\n- Answer using ONLY information found in the context.\n- After your answer, list the source chunk IDs you used as [Source: chunk_id].\n- If the context does not contain enough information to answer, respond with:\n  \"I cannot answer this question based on the available documentation.\"\n- Do NOT speculate or add information beyond the context.\n\nCONTEXT PASSAGES:\n[doc_integrations_001_chunk_000] NovaSaaS Integrations Native Integrations NovaSaaS offers 50+ native integrations with popular business tools. One-click integration setup is available for: Slack, Microsoft Teams, Google Workspace, Zoom, Salesforce, HubSpot, Zendesk, Jira, GitHub, GitLab, Figma, Dropbox, Box, Google Drive, OneDrive, Stripe, QuickBooks, and many others. Native integrations include automatic field mapping and do not require developer configuration. Integration management is available at Settings > Integrations. Webhooks Webhooks allow NovaSaaS to send real-time HTTP POST notifications to any external URL when specific events occur. Webhooks are useful for integrating with custom applications or systems not available in the native integration library. Webhook setup requires: (1) providing the target HTTP endpoint URL, (2) selecting the event types to subscribe to, (3) optionally configuring a secret for signature verification. NovaSaaS signs webhook payloads with an HMAC-SHA256 signature in the X-NovaSaaS-Signature header. Developers should verify this signature to prevent spoofed requests. Error handling and retries: NovaSaaS retries failed webhook deliveries up to 5 times with exponential backoff. Failed deliveries are logged in Settings > Webhooks > Delivery Logs. Compared to native integrations, webhooks offer greater flexibility and can connect NovaSaaS to any HTTP endpoint. However, they require developer configuration including payload parsing, signature verification, and error handling.\n\n[doc_integrations_001_chunk_001] Failed deliveries are logged in Settings > Webhooks > Delivery Logs. Compared to native integrations, webhooks offer greater flexibility and can connect NovaSaaS to any HTTP endpoint. However, they require developer configuration including payload parsing, signature verification, and error handling. For non-technical teams, native integrations are recommended. Webhooks are available on the Growth plan and above. REST API NovaSaaS provides a versioned REST API (current version: v2). API authentication is handled via Bearer tokens generated in Settings > Developer > API Tokens. All API responses use JSON. Rate limits: 1,000 requests per minute for Starter, 10,000 requests per minute for Growth and above. When the rate limit is exceeded, the API returns HTTP 429 Too Many Requests with a Retry-After header indicating when the next request may be made. Developers should implement exponential backoff for retry logic. Permanent rate limit increases can be requested through the developer portal at developers.novasaas.io. GraphQL API A GraphQL API is available in beta for Enterprise customers. It supports all core resource types and allows clients to request exactly the data they need, reducing over-fetching. Documentation is available at developers.novasaas.io/graphql. Zapier and Make NovaSaaS is available as a Zapier app with 200+ supported triggers and\n\n[doc_onboarding_001_chunk_001] at no additional cost for Business and Enterprise customers. Supported source systems for automated migration include Salesforce, HubSpot, Notion, Airtable, and Monday.com. Notification Channels NovaSaaS supports email, Slack, and Microsoft Teams as notification channels for alerts and workflow automations. SMS notifications are available on the Enterprise plan. Webhook endpoints can also be configured as custom notification targets. Notification preferences are managed per-user in Profile > Notifications or globally by admins in Settings > Notifications. First Project Setup A project in NovaSaaS represents a unit of work (e.g., a team, a client, a product). Create your first project from the dashboard by clicking '+ New Project'. Configure project settings including access control, custom fields, and default workflow stages. Projects can be made public (visible to all workspace members) or private (invite-only). Getting Help In-app help is available by clicking the '?' icon in the sidebar. The NovaSaaS Help Center (help.novasaas.io) contains step-by-step guides, video tutorials, and a searchable knowledge base. For direct support, use the in-app chat widget or email support@novasaas.io.\n\nQUESTION: How does NovaSaaS's webhook system compare to its native integrations in terms of flexibility and setup complexity?\n\nANSWER (with citations):",
+  "generated_answer": {
+    "answer_text": "NovaSaaS Integrations Native Integrations NovaSaaS offers 50+ native integrations with popular business tools. One-click integration setup is available for: Slack, Microsoft Teams, Google Workspace, Zoom, Salesforce, HubSpot, Zendesk, Jira, GitHub, GitLab, Figma, Dropbox, Box, Google Drive, OneDrive, Stripe, QuickBooks, and many others. Native integrations include automatic field mapping and do not require developer configuration. Integration management is available at Settings > Integrations. [Source: doc_integrations_001_chunk_000]",
+    "cited_chunk_ids": [
+      "doc_integrations_001_chunk_000"
+    ],
+    "cited_doc_ids": [
+      "doc_integrations_001"
+    ],
+    "abstained": false,
+    "prompt_strategy": "grounded",
+    "word_count": 64,
+    "token_count_estimate": 85
+  },
+  "metrics": {
+    "retrieval": {
+      "hit_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "context_precision": 0.6667,
+      "context_recall": 0.5,
+      "retrieved_relevant_count": 1,
+      "retrieved_total_count": 3
+    },
+    "answer": {
+      "answer_relevance_score": 0.3077,
+      "groundedness_score": 0.4302,
+      "citation_coverage_score": 0.5,
+      "exact_match_proxy": 0.3448,
+      "faithfulness_proxy": 0.6285,
+      "hallucination_risk_score": 0.5698,
+      "abstention_quality_score": 0.3077,
+      "overall_score": 0.4819
+    },
+    "latency_ms": 1.6162000010808697,
+    "prompt_tokens_estimate": 893,
+    "output_tokens_estimate": 85,
+    "estimated_cost_usd": 0.000575,
+    "failure_modes": [
+      "none"
+    ],
+    "warnings": []
+  },
+  "config_snapshot": {
+    "experiment_id": "grounded_k3",
+    "top_k": 3,
+    "prompt_strategy": "grounded",
+    "embedding_backend": "tfidf",
+    "step_durations_ms": {
+      "retrieval": 0.76,
+      "prompt_building": 0.06,
+      "generation": 0.79
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

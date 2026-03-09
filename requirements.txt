@@ -1,0 +1,33 @@
+# Core
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+pyyaml>=6.0.1
+numpy>=1.26.0
+pandas>=2.1.0
+scikit-learn>=1.3.0
+
+# Visualization
+matplotlib>=3.8.0
+plotly>=5.18.0
+kaleido>=0.2.1
+
+# Dashboard
+streamlit>=1.29.0
+
+# Notebooks
+jupyter>=1.0.0
+ipykernel>=6.27.0
+nbformat>=5.9.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Optional: semantic embeddings (graceful fallback to TF-IDF if unavailable)
+# sentence-transformers>=2.2.2
+# torch>=2.0.0
+
+# Utilities
+tqdm>=4.66.0
+rich>=13.7.0
+tabulate>=0.9.0

@@ -1,0 +1,113 @@
+{
+  "run_id": "00cce11c-b6fc-4361-b171-dd4cdec1eceb",
+  "experiment_id": "baseline_k3",
+  "timestamp": "2026-03-09T17:28:26.561344",
+  "query": "What is the uptime SLA for the Enterprise plan?",
+  "example_id": "eval_005",
+  "prompt_strategy": "baseline",
+  "top_k": 3,
+  "embedding_backend": "tfidf",
+  "retrieved_chunks": [
+    {
+      "chunk_id": "doc_pricing_001_chunk_001",
+      "doc_id": "doc_pricing_001",
+      "chunk_text": "per month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a 99.5% uptime SLA. Enterprise Plan — Custom pricing The Enterprise plan is designed for organizations with more than 50 users or special compliance requirements. Features include all Business features plus: unlimited seats, 99.9% uptime SLA, dedicated infrastructure (optional), custom data residency, HIPAA BAA availability, 24/7 dedicated support with 1-hour response SLA for critical issues, SSO with SCIM provisioning, and custom integrations. Enterprise pricing is negotiated annually. Contact sales@novasaas.io for a quote. Free Trial A 14-day free trial of the Growth plan is available with no credit card required. All Growth features are available during the trial. After 14 days, accounts automatically downgrade to Starter. Nonprofit and Startup Discounts Registered nonprofits qualify for a 50% discount on any paid plan. Startups under 2 years old with fewer than 10 employees qualify for a 30% discount on the Growth plan. Contact sales@novasaas.io with supporting documentation.",
+      "score": 0.2315,
+      "rank": 1,
+      "metadata": {
+        "title": "Pricing Plans and Feature Tiers",
+        "source_type": "guide",
+        "category": "pricing",
+        "version": "3.1",
+        "last_updated": "2025-11-15"
+      }
+    },
+    {
+      "chunk_id": "doc_sla_001_chunk_000",
+      "doc_id": "doc_sla_001",
+      "chunk_text": "NovaSaaS Service Level Agreement (SLA) Uptime Commitments NovaSaaS commits to the following uptime SLAs by plan: Starter — best effort (no SLA guarantee); Growth — 99.5% monthly uptime; Business — 99.5% monthly uptime with email + phone support escalation; Enterprise — 99.9% monthly uptime with dedicated support. Uptime is measured as the percentage of minutes in a calendar month during which the NovaSaaS platform is available and responding to requests. Planned maintenance windows (communicated at least 48 hours in advance) are excluded from uptime calculations. SLA Credits If uptime falls below the committed level, customers are eligible for service credits: 99.0%–99.5% uptime → 10% credit; 95.0%–99.0% → 25% credit; below 95.0% → 50% credit. Credits are applied to the next invoice. To claim an SLA credit, submit a request within 30 days of the incident via the billing portal. Support Tiers Starter: Community forums and Help Center documentation only. No direct support SLA. Growth: Email support with 12-hour first-response SLA during business hours (9 AM–6 PM ET, Monday–Friday). Business: Priority email, phone, and chat support with 4-hour first-response SLA. Dedicated account manager assigned. Enterprise: 24/7 dedicated support channel with 1-hour first-response SLA for P1/critical issues. Dedicated technical account manager and",
+      "score": 0.1483,
+      "rank": 2,
+      "metadata": {
+        "title": "Service Level Agreement and Support Tiers",
+        "source_type": "policy",
+        "category": "sla",
+        "version": "1.5",
+        "last_updated": "2025-08-30"
+      }
+    },
+    {
+      "chunk_id": "doc_sla_001_chunk_001",
+      "doc_id": "doc_sla_001",
+      "chunk_text": "during business hours (9 AM–6 PM ET, Monday–Friday). Business: Priority email, phone, and chat support with 4-hour first-response SLA. Dedicated account manager assigned. Enterprise: 24/7 dedicated support channel with 1-hour first-response SLA for P1/critical issues. Dedicated technical account manager and optional quarterly business reviews. Issue Severity Levels P1 Critical: complete service outage or data loss risk — Enterprise SLA: 1-hour response, 4-hour resolution target. P2 High: major feature unavailable, significant business impact — Enterprise SLA: 4-hour response, 24-hour resolution target. P3 Medium: partial feature degradation — Enterprise SLA: 8-hour response, 72-hour resolution target. P4 Low: minor issues, questions, feature requests — Enterprise SLA: 24-hour response, next-sprint consideration. Status Page Real-time platform status and incident history are available at status.novasaas.io. Subscribe to status updates via email, Slack, or webhook to receive notifications when incidents occur or are resolved.",
+      "score": 0.0648,
+      "rank": 3,
+      "metadata": {
+        "title": "Service Level Agreement and Support Tiers",
+        "source_type": "policy",
+        "category": "sla",
+        "version": "1.5",
+        "last_updated": "2025-08-30"
+      }
+    }
+  ],
+  "retrieved_doc_ids": [
+    "doc_pricing_001",
+    "doc_sla_001"
+  ],
+  "prompt_text": "You are a helpful support assistant for NovaSaaS, a B2B SaaS platform.\nAnswer the user's question using ONLY the information provided in the context below.\nBe concise and factual.\n\nCONTEXT:\nper month. Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a 99.5% uptime SLA. Enterprise Plan — Custom pricing The Enterprise plan is designed for organizations with more than 50 users or special compliance requirements. Features include all Business features plus: unlimited seats, 99.9% uptime SLA, dedicated infrastructure (optional), custom data residency, HIPAA BAA availability, 24/7 dedicated support with 1-hour response SLA for critical issues, SSO with SCIM provisioning, and custom integrations. Enterprise pricing is negotiated annually. Contact sales@novasaas.io for a quote. Free Trial A 14-day free trial of the Growth plan is available with no credit card required. All Growth features are available during the trial. After 14 days, accounts automatically downgrade to Starter. Nonprofit and Startup Discounts Registered nonprofits qualify for a 50% discount on any paid plan. Startups under 2 years old with fewer than 10 employees qualify for a 30% discount on the Growth plan. Contact sales@novasaas.io with supporting documentation.\n\nNovaSaaS Service Level Agreement (SLA) Uptime Commitments NovaSaaS commits to the following uptime SLAs by plan: Starter — best effort (no SLA guarantee); Growth — 99.5% monthly uptime; Business — 99.5% monthly uptime with email + phone support escalation; Enterprise — 99.9% monthly uptime with dedicated support. Uptime is measured as the percentage of minutes in a calendar month during which the NovaSaaS platform is available and responding to requests. Planned maintenance windows (communicated at least 48 hours in advance) are excluded from uptime calculations. SLA Credits If uptime falls below the committed level, customers are eligible for service credits: 99.0%–99.5% uptime → 10% credit; 95.0%–99.0% → 25% credit; below 95.0% → 50% credit. Credits are applied to the next invoice. To claim an SLA credit, submit a request within 30 days of the incident via the billing portal. Support Tiers Starter: Community forums and Help Center documentation only. No direct support SLA. Growth: Email support with 12-hour first-response SLA during business hours (9 AM–6 PM ET, Monday–Friday). Business: Priority email, phone, and chat support with 4-hour first-response SLA. Dedicated account manager assigned. Enterprise: 24/7 dedicated support channel with 1-hour first-response SLA for P1/critical issues. Dedicated technical account manager and\n\nduring business hours (9 AM–6 PM ET, Monday–Friday). Business: Priority email, phone, and chat support with 4-hour first-response SLA. Dedicated account manager assigned. Enterprise: 24/7 dedicated support channel with 1-hour first-response SLA for P1/critical issues. Dedicated technical account manager and optional quarterly business reviews. Issue Severity Levels P1 Critical: complete service outage or data loss risk — Enterprise SLA: 1-hour response, 4-hour resolution target. P2 High: major feature unavailable, significant business impact — Enterprise SLA: 4-hour response, 24-hour resolution target. P3 Medium: partial feature degradation — Enterprise SLA: 8-hour response, 72-hour resolution target. P4 Low: minor issues, questions, feature requests — Enterprise SLA: 24-hour response, next-sprint consideration. Status Page Real-time platform status and incident history are available at status.novasaas.io. Subscribe to status updates via email, Slack, or webhook to receive notifications when incidents occur or are resolved.\n\nQUESTION: What is the uptime SLA for the Enterprise plan?\n\nANSWER:",
+  "generated_answer": {
+    "answer_text": "Features include all Growth features plus: SSO via SAML 2.0, audit logs, custom roles and permissions, advanced workflow automation, dedicated account manager, and priority phone and chat support with 4-hour response SLA. Business plan customers also receive a 99.5% uptime SLA. Enterprise Plan — Custom pricing The Enterprise plan is designed for organizations with more than 50 users or special compliance requirements. Features include all Business features plus: unlimited seats, 99.9% uptime SLA, dedicated infrastructure (optional), custom data residency, HIPAA BAA availability, 24/7 dedicated support with 1-hour response SLA for critical issues, SSO with SCIM provisioning, and custom integrations.",
+    "cited_chunk_ids": [
+      "doc_pricing_001_chunk_001"
+    ],
+    "cited_doc_ids": [
+      "doc_pricing_001"
+    ],
+    "abstained": false,
+    "prompt_strategy": "baseline",
+    "word_count": 99,
+    "token_count_estimate": 131
+  },
+  "metrics": {
+    "retrieval": {
+      "hit_at_k": 1.0,
+      "reciprocal_rank": 0.5,
+      "context_precision": 0.6667,
+      "context_recall": 1.0,
+      "retrieved_relevant_count": 1,
+      "retrieved_total_count": 3
+    },
+    "answer": {
+      "answer_relevance_score": 0.3784,
+      "groundedness_score": 0.8236,
+      "citation_coverage_score": 0.0,
+      "exact_match_proxy": 0.3857,
+      "faithfulness_proxy": 1.0,
+      "hallucination_risk_score": 0.1764,
+      "abstention_quality_score": 0.3784,
+      "overall_score": 0.6316
+    },
+    "latency_ms": 1.9978999989689328,
+    "prompt_tokens_estimate": 746,
+    "output_tokens_estimate": 131,
+    "estimated_cost_usd": 0.000571,
+    "failure_modes": [
+      "missing_citation"
+    ],
+    "warnings": []
+  },
+  "config_snapshot": {
+    "experiment_id": "baseline_k3",
+    "top_k": 3,
+    "prompt_strategy": "baseline",
+    "embedding_backend": "tfidf",
+    "step_durations_ms": {
+      "retrieval": 1.15,
+      "prompt_building": 0.07,
+      "generation": 0.77
+    }
+  },
+  "errors": [],
+  "warnings": []
+}
