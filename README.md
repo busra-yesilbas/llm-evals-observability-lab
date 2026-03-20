@@ -1,4 +1,4 @@
-# 🔬 LLM Evals & Observability Lab
+# LLM Evals & Observability Lab
 
 > **A production-grade evaluation and observability framework for RAG and agentic LLM systems.**  
 > Runs fully without paid APIs. Designed for rigorous measurement, not toy demos.
@@ -20,21 +20,6 @@ This repository demonstrates how to **measure, trace, and systematically improve
 - full per-run observability traces
 - reproducible experiment comparison
 - failure mode taxonomy and detection
-
----
-
-## What Makes This Different from a Demo
-
-| Typical LLM Demo | This Repository |
-|---|---|
-| Single example, manually inspected | 20-example evaluation set with reference answers |
-| No metrics beyond "looks good" | 12+ metrics across retrieval and answer quality |
-| Black-box output | Full traces: query → chunks → prompt → answer → scores |
-| One configuration | 5 experiment configurations compared head-to-head |
-| Requires API keys | Runs fully locally with TF-IDF fallback |
-| No tests | 40+ pytest tests covering all modules |
-
----
 
 ## Architecture Overview
 
@@ -103,7 +88,7 @@ All metrics are in **[0, 1]** unless noted. Higher is better except where marked
 | `citation_coverage_score` | Set intersection (cited ↔ expected docs) | Measures source traceability |
 | `exact_match_proxy` | Token-level F1 (SQuAD-style) | Against reference answer |
 | `faithfulness_proxy` | Answer ↔ context Jaccard overlap | Proxy for NLI faithfulness |
-| `hallucination_risk_score` | 1 - groundedness + length penalty | ⚠️ Higher = more risk |
+| `hallucination_risk_score` | 1 - groundedness + length penalty | Higher = more risk |
 | `abstention_quality_score` | Correctness of abstain/answer decision | 1.0 if unanswerable+abstained |
 | `overall_score` | Weighted composite (configurable) | Primary ranking signal |
 
@@ -139,7 +124,7 @@ score_weights:
 
 ---
 
-## Failure Mode Taxonomy
+## Failure Mode
 
 The system detects and classifies the following failure patterns:
 
@@ -310,83 +295,11 @@ Launch with `streamlit run app/dashboard.py`:
 8. **Failure Analysis** — Mode distribution with definitions
 9. **Experiment Comparison** — Delta tables and per-example comparison
 
----
-
-## Sample Artifacts
-
-After running the full pipeline:
-
-```
-results/
-├── runs/
-│   └── <uuid>.json             # Full trace per run (100 files for 5 experiments × 20 examples)
-├── tables/
-│   ├── run_summary.csv         # Flat table of all run metrics
-│   ├── baseline_results.csv    # Baseline experiment results
-│   ├── leaderboard.csv         # Experiment leaderboard
-│   ├── failure_mode_analysis.csv
-│   └── hardest_examples.csv
-└── figures/
-    ├── overall_score_bar.png
-    └── metric_heatmap.png
-```
-
----
-
-## Limitations
-
-This is an evaluation framework, not a production LLM system. Known limitations:
-
-1. **Local generator is heuristic.** The `LocalGenerator` uses word-overlap and sentence extraction rather than a language model. It produces evaluation-worthy outputs but not human-quality prose. Replace with `generation_backend=openai` for realistic answers.
-
-2. **Metrics are heuristic proxies.** Groundedness and faithfulness use word-overlap, not neural entailment. They are interpretable and cost-free, but less accurate than NLI-based scorers or LLM-as-a-judge.
-
-3. **Corpus is synthetic.** The NovaSaaS knowledge base is fictional. Retrieval quality will differ on real-world corpora with more ambiguity, jargon, and length variation.
-
-4. **No vector database.** The index is in-memory numpy. For production scale (>100k chunks), integrate FAISS, Chroma, or Qdrant.
-
-5. **No re-ranking.** The retriever returns raw cosine similarity results without a cross-encoder re-ranking step.
-
----
-
-## Roadmap
-
-See [`docs/roadmap.md`](docs/roadmap.md) for the full roadmap.
-
-Near-term priorities:
-- [ ] Cross-encoder re-ranking support
-- [ ] LLM-as-a-judge evaluation mode (optional, needs API)
-- [ ] FAISS integration for larger corpora
-- [ ] Pytest-based regression gate (alert on score drops)
-- [ ] Multi-document synthesis eval examples
-- [ ] Structured output evaluation (JSON, tables)
-
----
-
-## Why This is Interesting for Applied AI / Senior ML Roles
-
-This project demonstrates:
-
-- **Evaluation rigor** — Not "the model said something reasonable" but a 12-metric measurement framework with documented methodology and explicit limitations
-- **Observability mindset** — Every run produces a full trace: every retrieved chunk, every prompt, every metric, every warning
-- **Experiment discipline** — Configurations compared head-to-head with delta tables and statistical summaries
-- **Production thinking** — Graceful fallbacks, configurable thresholds, idempotent storage, cost tracking
-- **Systems architecture** — Clean separation between retrieval, generation, evaluation, and observability layers
-- **Failure analysis** — Systematic taxonomy of what can go wrong and how to detect it
-
-These are the skills that matter when moving from demo to production: knowing when your system is broken, why it's broken, and how to measure improvement.
-
----
-
 ## License
 
 MIT License — see `LICENSE` for details.
 
 ---
-
-## Contributing
-
-Issues and PRs welcome. For major changes, please open a discussion first.
 
 ```bash
 # Development setup
