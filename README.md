@@ -119,9 +119,6 @@ score_weights:
   context_recall:   0.15
   faithfulness_proxy: 0.10
 ```
-
-> **Transparency note:** All metrics are heuristic proxies. Groundedness and faithfulness use word-overlap and sentence attribution rather than NLI models. This is intentional — the repo runs without GPUs or API costs. For production use, consider replacing with a dedicated NLI scorer or LLM-as-a-judge. Methodology details in [`docs/evaluation_methodology.md`](docs/evaluation_methodology.md).
-
 ---
 
 ## Failure Mode
