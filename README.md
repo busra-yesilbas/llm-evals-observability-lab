@@ -79,19 +79,6 @@ User Query
 
 All metrics are in **[0, 1]** unless noted. Higher is better except where marked.
 
-### Answer Quality Metrics
-
-| Metric | Method | Notes |
-|---|---|---|
-| `answer_relevance_score` | Word-overlap (question ↔ answer) | Proxy for topical alignment |
-| `groundedness_score` | Sentence attribution + chunk overlap | Fraction of answer supported by context |
-| `citation_coverage_score` | Set intersection (cited ↔ expected docs) | Measures source traceability |
-| `exact_match_proxy` | Token-level F1 (SQuAD-style) | Against reference answer |
-| `faithfulness_proxy` | Answer ↔ context Jaccard overlap | Proxy for NLI faithfulness |
-| `hallucination_risk_score` | 1 - groundedness + length penalty | Higher = more risk |
-| `abstention_quality_score` | Correctness of abstain/answer decision | 1.0 if unanswerable+abstained |
-| `overall_score` | Weighted composite (configurable) | Primary ranking signal |
-
 ### Retrieval Quality Metrics
 
 | Metric | Definition |
@@ -119,21 +106,6 @@ score_weights:
   context_recall:   0.15
   faithfulness_proxy: 0.10
 ```
----
-
-## Failure Mode
-
-The system detects and classifies the following failure patterns:
-
-| Failure Mode | Detection | Meaning |
-|---|---|---|
-| `unsupported_answer` | groundedness < 0.30 | Answer not grounded in retrieved context |
-| `weak_retrieval` | context_recall < 0.30 | Expected documents not retrieved |
-| `missing_citation` | citation_coverage < 0.20 | Answerable but no source cited |
-| `incorrect_abstention` | abstained + is_answerable | Gave up when answer existed |
-| `overconfident_answer` | answered + not is_answerable | Answered when no evidence available |
-| `incomplete_answer` | answer_words < 10 | Truncated or trivially short response |
-
 ---
 
 ## Quickstart
