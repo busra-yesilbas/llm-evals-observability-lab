@@ -248,39 +248,6 @@ The pipeline automatically uses the API when configured and falls back to local 
 
 ---
 
-## Repository Structure
-
-```
-llm-evals-observability-lab/
-├── configs/                   # YAML configuration files
-├── data/
-│   ├── raw/corpus.json        # Source documents (NovaSaaS KB)
-│   ├── processed/chunks.json  # Processed chunks + index
-│   └── eval/eval_set.json     # 20-example evaluation set
-├── docs/                      # Architecture, methodology, roadmap
-├── notebooks/                 # 4 analysis notebooks
-├── app/dashboard.py           # Streamlit dashboard (9 sections)
-├── scripts/                   # 5 runnable pipeline scripts
-├── src/llm_evals_lab/         # Core Python package
-│   ├── config.py              # Config loading and resolution
-│   ├── schemas.py             # Pydantic data models
-│   ├── utils.py               # Shared utilities
-│   ├── data/                  # Corpus loader, chunking, eval set
-│   ├── retrieval/             # Embedder, index, retriever
-│   ├── generation/            # Prompts, generator, RAG pipeline
-│   ├── evaluation/            # All metric implementations
-│   ├── observability/         # Tracer, logger, run store
-│   ├── experiments/           # Comparison and leaderboard
-│   └── visualization/         # Plotly and Matplotlib charts
-├── tests/                     # 40+ pytest tests
-└── results/
-    ├── runs/                  # Per-run JSON traces
-    ├── tables/                # CSV summaries and leaderboards
-    └── figures/               # Generated charts
-```
-
----
-
 ## Dashboard Sections
 
 Launch with `streamlit run app/dashboard.py`:
